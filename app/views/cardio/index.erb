@@ -1,0 +1,18 @@
+<div class="cardio">
+<% if @sessions.length == 0 -%>
+	No logged cardio sessions
+<% else -%>
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<th></th>
+			<th>Date of Workout</th>
+			<th>Distance</th>
+			<th>Time Taken</th>
+		</tr>
+<% @sessions.each { |@session| %>
+<%= render :partial => "session" %>
+<% } %>
+	</table>
+<% end -%>
+<%= button_to "Add Run", :action => "new" %>
+</div>
