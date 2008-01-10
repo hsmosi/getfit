@@ -1,0 +1,69 @@
+div.group
+{
+	margin-left:33%;
+	margin-right:33%;
+	margin-top:5em;
+	margin-bottom:33%;
+}
+
+div.outline
+{
+	border: solid 1px #D3C9FF;
+	padding: 0.5em;
+}
+
+div.title
+{
+	font-style: italic;
+	font-size: x-large;
+	color: yellow;
+	padding-bottom: 1em;
+}
+
+div.block
+{
+	font-family: helvetica;
+	background-color: #170072;
+	color: white;
+	padding: 1em;
+	padding-right: 1.5em;
+	font-size:smaller;
+	margin-bottom: 0.5em;
+}
+div.right
+{
+	text-align: right;
+}
+
+div.register
+{
+	font-family: helvetica;
+	color: darkblue;
+	font-size:smaller;
+}
+
+body
+{
+	font-family: helvetica;
+	color: darkblue;
+}
+
+a
+{
+	color: darkblue;
+	text-decoration: none;
+}
+
+input.text
+{
+	font-size:x-large;
+	width: 100%;
+	margin-bottom: 0.5em;
+	display: block;
+}
+
+input.button
+{
+	padding: 0px;
+	margin: 0px;
+}
