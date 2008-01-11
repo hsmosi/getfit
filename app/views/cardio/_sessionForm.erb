@@ -1,4 +1,4 @@
-<% form_for :session, @session, :url => { :action => "new" } do |f| %>
+<% form_for :session, @session, :url => { :action => "new" }, :html => { :id => "session" } do |f| %>
 <table cellpadding="0" cellspacing="0">
 	<tr>
 		<td>Date</td>
@@ -18,5 +18,8 @@
 	</tr>
 </table>
 <%= content_tag('div', render(:partial => "sessionErrors") ) if !@session.errors.nil? %>
-<%= submit_tag "Save" %>
+<div class='buttonwrapper'>
+	<a class='ovalbutton' href='#' onclick="$('session').submit()"><span>Save</span></a>
+	<a class='ovalbutton' href='<%= url_for(:action => "index")%>' style="margin-left: 0.5em"><span>Back</span></a>
+</div>
 <% end -%>

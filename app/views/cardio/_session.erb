@@ -1,6 +1,7 @@
 <tr>
 	<td><%= link_to image_tag("delete.png", :size => "10x10"), { :action => "delete", :sessionid => @session.id }, :confirm => "Are you sure?" %></td>
 	<td><%= link_to @session.workoutdate.strftime("%A %d %B"), { :action => "edit", :sessionid => @session.id } %></td>
+	<td><%= @session.cardiotype.description %>
 	<td align="right"><%= @session.distance %></td>
 	<td align="right"><%= @session.timetakenastext %></td>
 </tr>
