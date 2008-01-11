@@ -9,14 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 4) do
 
   create_table "cardiosessions", :force => true do |t|
-    t.integer  "distance",    :null => false
-    t.date     "workoutdate", :null => false
-    t.datetime "timetaken",   :null => false
+    t.integer  "distance",                     :null => false
+    t.date     "workoutdate",                  :null => false
+    t.datetime "timetaken",                    :null => false
     t.string   "comments"
-    t.integer  "user_id",     :null => false
+    t.integer  "user_id",                      :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "cardiotype_id", :default => 1, :null => false
+  end
+
+  create_table "cardiotypes", :force => true do |t|
+    t.string   "description", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
