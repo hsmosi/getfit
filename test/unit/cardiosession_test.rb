@@ -2,11 +2,14 @@ require File.dirname(__FILE__) + '/../test_helper'
 
 class CardiosessionTest < ActiveSupport::TestCase
   # Replace this with your real tests.
-  fixtures :users, :cardiosessions
+  fixtures :cardiotypes, :users, :cardiosessions
   
   def setup
     @quentin = users(:quentin)
-    @session = cardiosessions(:quentinrun)
+    @run_session = cardiosessions(:quentinrun)
+    @swim_session = cardiosessions(:quentinswim)
+    @run = cardiotypes(:run)
+    @swim = cardiotypes(:swim)
   end
   
   def test_can_access_james_fixtures
@@ -14,61 +17,65 @@ class CardiosessionTest < ActiveSupport::TestCase
     assert(cardiosessions(:quentinrun) != nil)
   end
   
-  def test_relationships
-    assert_equal(@quentin.cardiosessions.count, 2)
-    assert_equal(@session.user, @quentin)
+  def test_relationship_to_user
+    assert_equal(@run_session.user, @quentin)
+  end
+  
+  def test_relationship_to_type
+    assert_equal(@run_session.cardiotype, @run)
+    assert_equal(@swim_session.cardiotype, @swim)
   end
   
   def test_fixturevalid
-    assert(@session.valid?)
+    assert(@run_session.valid?)
   end
   
   def test_invaliddistance
-    @session.distance = "a"
-    assert(!@session.valid?)
+    @run_session.distance = "a"
+    assert(!@run_session.valid?)
   end
   
   def test_invalidtimetakenastext
-    @session.timetakenastext= "a"
-    assert(!@session.valid?)
+    @run_session.timetakenastext= "a"
+    assert(!@run_session.valid?)
   end
   
   def test_invalidtimetakenastext_hours
-    @session.timetakenastext = "24:00:00"
-    assert_nil(@session.timetaken)
+    @run_session.timetakenastext = "24:00:00"
+    assert_nil(@run_session.timetaken)
   end
   
   def test_invalidtimetakenastext_minutes
-    @session.timetakenastext = "61:00"
-    assert_nil(@session.timetaken)
+    @run_session.timetakenastext = "61:00"
+    assert_nil(@run_session.timetaken)
   end
   
   def test_invalidtimetakenastext_seconds
-    @session.timetakenastext = "61"
-    assert_nil(@session.timetaken)
+    @run_session.timetakenastext = "61"
+    assert_nil(@run_session.timetaken)
   end
   
   def test_texttotime_sec
-    @session.timetakenastext = "10"
-    assert_not_nil(@session.timetaken)
-    assert_equal(@session.timetaken.hour, 0)
-    assert_equal(@session.timetaken.min, 0)
-    assert_equal(@session.timetaken.sec, 10)
+    @run_session.timetakenastext = "10"
+    assert_not_nil(@run_session.timetaken)
+    assert_equal(@run_session.timetaken.hour, 0)
+    assert_equal(@run_session.timetaken.min, 0)
+    assert_equal(@run_session.timetaken.sec, 10)
   end
   
   def test_texttotime_minsec
-    @session.timetakenastext = "12:34"
-    assert_not_nil(@session.timetaken)
-    assert_equal(@session.timetaken.hour, 0)
-    assert_equal(@session.timetaken.min, 12)
-    assert_equal(@session.timetaken.sec, 34)
+    @run_session.timetakenastext = "12:34"
+    assert_not_nil(@run_session.timetaken)
+    assert_equal(@run_session.timetaken.hour, 0)
+    assert_equal(@run_session.timetaken.min, 12)
+    assert_equal(@run_session.timetaken.sec, 34)
   end
   
   def test_texttotime_hourminsec
-    @session.timetakenastext = "12:13:14"
-    assert_not_nil(@session.timetaken)
-    assert_equal(@session.timetaken.hour, 12)
-    assert_equal(@session.timetaken.min, 13)
-    assert_equal(@session.timetaken.sec, 14)
+    @run_session.timetakenastext = "12:13:14"
+    assert_not_nil(@run_session.timetaken)
+    assert_equal(@run_session.timetaken.hour, 12)
+    assert_equal(@run_session.timetaken.min, 13)
+    assert_equal(@run_session.timetaken.sec, 14)
   end
 end

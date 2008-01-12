@@ -1,4 +1,3 @@
-<% @currentsession.errors.each { |error| %>
-<span class="error"><%= error[1] %></span>
+<% @currentsession.errors.each { |code,error| %>
+<span class="error"><%= error %></span>
 <% } %>
-

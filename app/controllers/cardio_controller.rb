@@ -3,13 +3,23 @@ class CardioController < ApplicationController
   
   def index
     @currentsession = nil
-    @sessions = Cardiosession.find(:all, :order => "workoutdate desc")
+    @sessions = Cardiosession.find(:all, :conditions => "user_id = #{self.current_user.id}", :order => "workoutdate desc")
   end
   
   def edit
     @cardiotypes = Cardiotype.find(:all)
     if params[:currentsession].nil?
-      @currentsession = Cardiosession.find(params[:sessionid])
+      begin
+        @currentsession = Cardiosession.find(params[:sessionid])
+      rescue
+        redirect_to :action => "unauthorised"
+        return
+      end
+      
+      if @currentsession.user != self.current_user
+        @currentsession = nil
+        redirect_to :action => "unauthorised"
+      end
     else
       @currentsession = Cardiosession.update(params[:currentsession][:id], params[:currentsession])
       redirect_to :action => "index" if (@currentsession.valid?)
