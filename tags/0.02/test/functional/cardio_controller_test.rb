@@ -1,0 +1,73 @@
+require File.dirname(__FILE__) + '/../test_helper'
+
+class CardioControllerTest < ActionController::TestCase
+  fixtures :users, :cardiosessions
+  # Replace this with your real tests.
+  def setup
+    @controller = CardioController.new
+    @request = ActionController::TestRequest.new
+    @response =  ActionController::TestResponse.new
+  end
+  
+  def test_index
+    login_as(:quentin)
+    get :index
+    assert_response(:success)
+    assert_not_nil(assigns["sessions"])
+    assert_equal(assigns["sessions"].length, 2)
+  end
+  
+  def test_edit_load_succeed
+    run_session = cardiosessions(:quentinrun)
+    
+    login_as(:quentin)
+    get :edit, :sessionid => run_session.id
+    assert_response(:success)
+    assert_not_nil(assigns["currentsession"])
+    assert_equal(assigns["currentsession"].id, run_session.id)
+  end
+  
+  def test_edit_load_failed_missing_session
+    login_as(:quentin)
+    get :edit, :sessionid => 999
+    assert_nil(assigns["currentsession"])
+    assert_response(:redirect)
+  end
+  
+  def test_edit_load_failed_unauthorised_to_view_session
+    run_session = cardiosessions(:quentinrun)
+    
+    login_as(:aaron)
+    get :edit, :sessionid => run_session.id
+    assert_nil(assigns["currentsession"])
+    assert_response(:redirect)
+  end
+  
+  def test_edit_save_succeed
+    original_row_count = Cardiosession.find(:all).length
+    run_session = cardiosessions(:quentinrun)
+    login_as(:quentin)
+    
+    post :edit, :currentsession => { :id => run_session.id, :distance => 999 }
+    assert_response(:redirect)
+    assert_not_nil(assigns["currentsession"])
+    
+    saved_session = Cardiosession.find(:first, :conditions => "id = #{run_session.id}")
+    assert_equal(saved_session.distance, 999)
+    assert_equal(original_row_count, Cardiosession.find(:all).length) # edit operation so we shouldn't be adding any rows
+  end
+  
+  def test_edit_save_failed
+    original_row_count = Cardiosession.find(:all).length
+    run_session = cardiosessions(:quentinrun)
+    login_as(:quentin)
+    
+    post :edit, :currentsession => { :id => run_session.id, :distance => "z" }
+    assert_response(:success)
+    assert_not_nil(assigns["currentsession"])
+    
+    saved_session = Cardiosession.find(:first, :conditions => "id = #{run_session.id}")
+    assert_equal(saved_session.distance, run_session.distance)
+    assert_equal(original_row_count, Cardiosession.find(:all).length)
+  end
+end
