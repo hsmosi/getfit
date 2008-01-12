@@ -19603,3 +19603,953 @@ Rendered cardio/_session (0.00094)
   [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
 Rendered cardio/_session (0.00091)
 Completed in 0.03922 (25 reqs/sec) | Rendering: 0.02279 (58%) | DB: 0.00320 (8%) | 200 OK [http://0.0.0.0/cardio]
+
+
+Processing CardioController#new (for 127.0.0.1 at 2008-01-12 13:13:20) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"new", "controller"=>"cardio"}
+  [4;36;1mUser Load (0.000283)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000380)[0m   [0mSELECT * FROM cardiotypes [0m
+Rendering template within layouts/cardio
+Rendering cardio/new
+Rendered cardio/_sessionErrors (0.00027)
+Rendered cardio/_sessionForm (0.00320)
+Completed in 0.02234 (44 reqs/sec) | Rendering: 0.00589 (26%) | DB: 0.00066 (2%) | 200 OK [http://0.0.0.0/cardio/new]
+
+
+Processing CardioController#new (for 127.0.0.1 at 2008-01-12 13:13:28) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"authenticity_token"=>"47837d3c8fc54a9d9821e8772f2824044d6cae5a", "action"=>"new", "controller"=>"cardio", "currentsession"=>{"workoutdate(3i)"=>"12", "comments"=>"", "timetakenastext"=>"2", "id"=>"", "workoutdate(1i)"=>"2008", "workoutdate(2i)"=>"1", "cardiotype_id"=>"1", "distance"=>"99"}}
+  [4;36;1mUser Load (0.000331)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000461)[0m   [0mSELECT * FROM cardiotypes [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mCardiosession Create (0.000451)[0m   [0;1mINSERT INTO cardiosessions ("updated_at", "comments", "timetaken", "workoutdate", "user_id", "cardiotype_id", "created_at", "distance") VALUES('2008-01-12 13:13:28', '', '2008-01-12 00:00:02', '2008-01-12', 1, 1, '2008-01-12 13:13:28', 99)[0m
+Redirected to http://0.0.0.0:3000/cardio
+Completed in 0.06847 (14 reqs/sec) | DB: 0.00124 (1%) | 302 Found [http://0.0.0.0/cardio/new]
+
+
+Processing CardioController#index (for 127.0.0.1 at 2008-01-12 13:13:28) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"index", "controller"=>"cardio"}
+  [4;35;1mUser Load (0.000424)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiosession Load (0.002769)[0m   [0;1mSELECT * FROM cardiosessions ORDER BY workoutdate desc[0m
+Rendering template within layouts/cardio
+Rendering cardio/index
+  [4;35;1mCardiotype Load (0.000306)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00756)
+  [4;36;1mCardiotype Load (0.000239)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00143)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00099)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00091)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00092)
+  [4;36;1mCardiotype Load (0.000235)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00125)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00099)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00091)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00091)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00091)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00090)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00092)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00090)
+Completed in 0.04126 (24 reqs/sec) | Rendering: 0.02369 (57%) | DB: 0.00397 (9%) | 200 OK [http://0.0.0.0/cardio]
+
+
+Processing CardioController#index (for 127.0.0.1 at 2008-01-12 13:14:55) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"index", "controller"=>"cardio"}
+  [4;36;1mUser Load (0.000288)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiosession Load (0.002213)[0m   [0mSELECT * FROM cardiosessions ORDER BY workoutdate desc[0m
+Rendering template within layouts/cardio
+Rendering cardio/index
+  [4;36;1mCardiotype Load (0.000295)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.01163)
+  [4;35;1mCardiotype Load (0.000291)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00221)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00103)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00093)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00093)
+  [4;35;1mCardiotype Load (0.000239)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00132)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00100)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00093)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00093)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00093)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00093)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00091)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00091)
+Completed in 0.04361 (22 reqs/sec) | Rendering: 0.02868 (65%) | DB: 0.00333 (7%) | 200 OK [http://0.0.0.0/cardio]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 14:54:38) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"2"}
+  [4;35;1mUser Load (0.000308)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000467)[0m   [0;1mSELECT * FROM cardiotypes [0m
+  [4;35;1mCardiosession Load (0.000361)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+Rendering template within layouts/cardio
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00027)
+Rendered cardio/_sessionForm (0.00577)
+Completed in 0.02597 (38 reqs/sec) | Rendering: 0.00874 (33%) | DB: 0.00114 (4%) | 200 OK [http://0.0.0.0/cardio/edit?sessionid=2]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 14:54:42) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"authenticity_token"=>"47837d3c8fc54a9d9821e8772f2824044d6cae5a", "action"=>"edit", "controller"=>"cardio", "currentsession"=>{"workoutdate(3i)"=>"11", "comments"=>"", "timetakenastext"=>"10:00", "id"=>"2", "workoutdate(1i)"=>"2008", "workoutdate(2i)"=>"1", "cardiotype_id"=>"1", "distance"=>"5"}}
+  [4;36;1mUser Load (0.000289)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000363)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000301)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000292)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCardiosession Update (0.000566)[0m   [0;1mUPDATE cardiosessions SET "distance" = 5, "created_at" = '2008-01-12 12:12:18', "timetaken" = '2008-01-12 00:10:00', "comments" = '', "workoutdate" = '2008-01-11', "cardiotype_id" = 1, "updated_at" = '2008-01-12 14:54:42', "user_id" = 1 WHERE "id" = 2[0m
+Redirected to http://0.0.0.0:3000/cardio
+Completed in 0.02535 (39 reqs/sec) | DB: 0.00181 (7%) | 302 Found [http://0.0.0.0/cardio/edit]
+
+
+Processing CardioController#index (for 127.0.0.1 at 2008-01-12 14:54:42) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"index", "controller"=>"cardio"}
+  [4;35;1mUser Load (0.000297)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiosession Load (0.002440)[0m   [0;1mSELECT * FROM cardiosessions ORDER BY workoutdate desc[0m
+Rendering template within layouts/cardio
+Rendering cardio/index
+  [4;35;1mCardiotype Load (0.000256)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00867)
+  [4;36;1mCardiotype Load (0.000274)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00158)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00110)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00099)
+  [4;35;1mCardiotype Load (0.000306)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00143)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00110)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00098)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00105)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00097)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00097)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00097)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00092)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00096)
+Completed in 0.04137 (24 reqs/sec) | Rendering: 0.02605 (62%) | DB: 0.00357 (8%) | 200 OK [http://0.0.0.0/cardio]
+  [4;36;1mSQL (0.000250)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000358)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.002008)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000218)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000481)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000239)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000313)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000055)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000061)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000191)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.002615)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.002063)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.002828)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002559)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.002437)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.002276)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000197)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000300)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000248)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000165)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000207)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000311)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000058)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000062)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000165)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.002564)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.001489)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.001900)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.001622)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.001679)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.002578)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000194)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000333)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000169)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000157)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000197)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000314)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000056)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000054)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000203)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.002558)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.002069)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.003005)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002552)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.002238)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.002919)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000498)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000260)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000207)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000158)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000163)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000232)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000350)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000058)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000062)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000177)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.035551)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.003077)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.002389)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002308)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.001788)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001399)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000198)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000294)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000197)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000159)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000197)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000385)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000407)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000112)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000056)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000182)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.003122)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.003158)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.002696)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002910)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.002937)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.002454)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000284)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000169)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000323)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000056)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000177)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.010644)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.002688)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.002774)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002391)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.003056)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.002539)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000272)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000168)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000167)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000315)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000059)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000058)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000166)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.002697)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.002501)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.003401)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002597)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.002063)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001873)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000286)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000169)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000228)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000322)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000117)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000066)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000059)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000177)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.002696)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.002900)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.005007)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.006712)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.001699)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001924)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000203)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000286)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000165)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000237)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000165)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000346)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000055)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000199)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.002092)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.002449)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.002548)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002676)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.002897)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.002330)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000230)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000257)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000165)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000164)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000197)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000208)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000425)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000118)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000057)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000055)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000178)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.002403)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.002421)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.002437)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.006874)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.001953)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.001923)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000199)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000252)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000166)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000167)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000193)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000311)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000116)[0m   [0;1mPRAGMA index_list(cardiosessions)[0m
+  [4;35;1mSQL (0.000055)[0m   [0mPRAGMA index_list(cardiotypes)[0m
+  [4;36;1mSQL (0.000056)[0m   [0;1mPRAGMA index_list(users)[0m
+  [4;35;1mSQL (0.000163)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiosessions: DROP TABLE cardiosessions[0m
+  [4;35;1mSQL (0.002935)[0m   [0mCREATE TABLE cardiosessions ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "distance" integer NOT NULL, "workoutdate" date NOT NULL, "timetaken" datetime NOT NULL, "comments" varchar(255) DEFAULT NULL, "user_id" integer NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "cardiotype_id" integer DEFAULT 1 NOT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: cardiotypes: DROP TABLE cardiotypes[0m
+  [4;35;1mSQL (0.002178)[0m   [0mCREATE TABLE cardiotypes ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255) NOT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: no such table: users: DROP TABLE users[0m
+  [4;35;1mSQL (0.003266)[0m   [0mCREATE TABLE users ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(255) DEFAULT NULL, "email" varchar(255) DEFAULT NULL, "crypted_password" varchar(40) DEFAULT NULL, "salt" varchar(40) DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL, "remember_token" varchar(255) DEFAULT NULL, "remember_token_expires_at" datetime DEFAULT NULL) [0m
+  [4;36;1mSQL (0.002410)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.002281)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.002114)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+
+
+Processing CardioController#index (for 127.0.0.1 at 2008-01-12 20:06:00) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"index", "controller"=>"cardio"}
+  [4;36;1mUser Load (0.000577)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiosession Load (0.007557)[0m   [0mSELECT * FROM cardiosessions ORDER BY workoutdate desc[0m
+Rendering template within layouts/cardio
+Rendering cardio/index
+  [4;36;1mCardiotype Load (0.000320)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00874)
+  [4;35;1mCardiotype Load (0.000262)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00159)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00107)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00107)
+  [4;36;1mCardiotype Load (0.000248)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00135)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00106)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00091)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00090)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00090)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00090)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00097)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00117)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00095)
+Completed in 0.05739 (17 reqs/sec) | Rendering: 0.02619 (45%) | DB: 0.00896 (15%) | 200 OK [http://0.0.0.0/cardio]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:06:02) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"12"}
+  [4;35;1mUser Load (0.000299)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000396)[0m   [0;1mSELECT * FROM cardiotypes [0m
+  [4;35;1mCardiosession Load (0.000308)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 12) [0m
+Rendering template within layouts/cardio
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00066)
+Rendered cardio/_sessionForm (0.00476)
+Completed in 0.02416 (41 reqs/sec) | Rendering: 0.00748 (30%) | DB: 0.00100 (4%) | 200 OK [http://0.0.0.0/cardio/edit?sessionid=12]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:06:07) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"authenticity_token"=>"47837d3c8fc54a9d9821e8772f2824044d6cae5a", "action"=>"edit", "controller"=>"cardio", "currentsession"=>{"workoutdate(3i)"=>"13", "comments"=>"", "timetakenastext"=>"15", "id"=>"12", "workoutdate(1i)"=>"2008", "workoutdate(2i)"=>"1", "cardiotype_id"=>"1", "distance"=>"b"}}
+  [4;36;1mUser Load (0.000352)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000474)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000323)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 12) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000299)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/cardio
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00028)
+Rendered cardio/_sessionForm (0.00340)
+Completed in 0.07009 (14 reqs/sec) | Rendering: 0.00545 (7%) | DB: 0.00145 (2%) | 200 OK [http://0.0.0.0/cardio/edit]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:07:59) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"authenticity_token"=>"47837d3c8fc54a9d9821e8772f2824044d6cae5a", "action"=>"edit", "controller"=>"cardio", "currentsession"=>{"workoutdate(3i)"=>"13", "comments"=>"", "timetakenastext"=>"15", "id"=>"12", "workoutdate(1i)"=>"2008", "workoutdate(2i)"=>"1", "cardiotype_id"=>"1", "distance"=>"b"}}
+  [4;36;1mUser Load (0.000290)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000402)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000409)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 12) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000407)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/cardio
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00066)
+Rendered cardio/_sessionForm (0.00369)
+Completed in 0.02801 (35 reqs/sec) | Rendering: 0.00585 (20%) | DB: 0.00151 (5%) | 200 OK [http://0.0.0.0/cardio/edit]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:08:00) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"authenticity_token"=>"47837d3c8fc54a9d9821e8772f2824044d6cae5a", "action"=>"edit", "controller"=>"cardio", "currentsession"=>{"workoutdate(3i)"=>"13", "comments"=>"", "timetakenastext"=>"15", "id"=>"12", "workoutdate(1i)"=>"2008", "workoutdate(2i)"=>"1", "cardiotype_id"=>"1", "distance"=>"b"}}
+  [4;36;1mUser Load (0.000294)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000392)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000303)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 12) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000317)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/cardio
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00028)
+Rendered cardio/_sessionForm (0.00322)
+Completed in 0.02570 (38 reqs/sec) | Rendering: 0.00508 (19%) | DB: 0.00131 (5%) | 200 OK [http://0.0.0.0/cardio/edit]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:08:01) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"authenticity_token"=>"47837d3c8fc54a9d9821e8772f2824044d6cae5a", "action"=>"edit", "controller"=>"cardio", "currentsession"=>{"workoutdate(3i)"=>"13", "comments"=>"", "timetakenastext"=>"15", "id"=>"12", "workoutdate(1i)"=>"2008", "workoutdate(2i)"=>"1", "cardiotype_id"=>"1", "distance"=>"b"}}
+  [4;36;1mUser Load (0.000352)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000544)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000394)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 12) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000326)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/cardio
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00030)
+Rendered cardio/_sessionForm (0.00359)
+Completed in 0.07032 (14 reqs/sec) | Rendering: 0.00554 (7%) | DB: 0.00162 (2%) | 200 OK [http://0.0.0.0/cardio/edit]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:08:02) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"authenticity_token"=>"47837d3c8fc54a9d9821e8772f2824044d6cae5a", "action"=>"edit", "controller"=>"cardio", "currentsession"=>{"workoutdate(3i)"=>"13", "comments"=>"", "timetakenastext"=>"15", "id"=>"12", "workoutdate(1i)"=>"2008", "workoutdate(2i)"=>"1", "cardiotype_id"=>"1", "distance"=>"b"}}
+  [4;36;1mUser Load (0.000288)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000386)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000296)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 12) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000315)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/cardio
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00026)
+Rendered cardio/_sessionForm (0.00332)
+Completed in 0.02592 (38 reqs/sec) | Rendering: 0.00544 (20%) | DB: 0.00129 (4%) | 200 OK [http://0.0.0.0/cardio/edit]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:08:16) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"authenticity_token"=>"47837d3c8fc54a9d9821e8772f2824044d6cae5a", "action"=>"edit", "controller"=>"cardio", "currentsession"=>{"workoutdate(3i)"=>"13", "comments"=>"", "timetakenastext"=>"15", "id"=>"12", "workoutdate(1i)"=>"2008", "workoutdate(2i)"=>"1", "cardiotype_id"=>"1", "distance"=>"10"}}
+  [4;36;1mUser Load (0.000304)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000423)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000300)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 12) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000281)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCardiosession Update (0.000572)[0m   [0;1mUPDATE cardiosessions SET "distance" = 10, "created_at" = '2008-01-12 13:08:01', "timetaken" = '2008-01-12 00:00:15', "comments" = '', "workoutdate" = '2008-01-13', "cardiotype_id" = 1, "updated_at" = '2008-01-12 20:08:16', "user_id" = 1 WHERE "id" = 12[0m
+Redirected to http://0.0.0.0:3000/cardio
+Completed in 0.02593 (38 reqs/sec) | DB: 0.00188 (7%) | 302 Found [http://0.0.0.0/cardio/edit]
+
+
+Processing CardioController#index (for 127.0.0.1 at 2008-01-12 20:08:16) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"index", "controller"=>"cardio"}
+  [4;35;1mUser Load (0.000400)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiosession Load (0.002174)[0m   [0;1mSELECT * FROM cardiosessions ORDER BY workoutdate desc[0m
+Rendering template within layouts/cardio
+Rendering cardio/index
+  [4;35;1mCardiotype Load (0.000258)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00783)
+  [4;36;1mCardiotype Load (0.000285)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00161)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00113)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00099)
+  [4;35;1mCardiotype Load (0.000308)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00143)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00111)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00098)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00099)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00098)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00110)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00130)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00095)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00094)
+Completed in 0.08473 (11 reqs/sec) | Rendering: 0.02748 (32%) | DB: 0.00342 (4%) | 200 OK [http://0.0.0.0/cardio]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:12:52) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"11"}
+  [4;36;1mUser Load (0.000306)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000388)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000305)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 11) [0m
+  [4;35;1mUser Load (0.000269)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/cardio
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00089)
+Rendered cardio/_sessionForm (0.00526)
+Completed in 0.02498 (40 reqs/sec) | Rendering: 0.00819 (32%) | DB: 0.00127 (5%) | 200 OK [http://0.0.0.0/cardio/edit?sessionid=11]
+
+
+Processing CardioController#index (for 127.0.0.1 at 2008-01-12 20:13:03) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"index", "controller"=>"cardio"}
+  [4;36;1mUser Load (0.000290)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiosession Load (0.002110)[0m   [0mSELECT * FROM cardiosessions ORDER BY workoutdate desc[0m
+Rendering template within layouts/cardio
+Rendering cardio/index
+  [4;36;1mCardiotype Load (0.000329)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.01006)
+  [4;35;1mCardiotype Load (0.000286)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00170)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00133)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00101)
+  [4;36;1mCardiotype Load (0.000286)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00148)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00114)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00098)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00097)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00097)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00101)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00109)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00111)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00098)
+Completed in 0.04346 (23 reqs/sec) | Rendering: 0.02866 (65%) | DB: 0.00330 (7%) | 200 OK [http://0.0.0.0/cardio]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:27:18) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"3"}
+  [4;35;1mUser Load (0.000294)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000431)[0m   [0;1mSELECT * FROM cardiotypes [0m
+  [4;35;1mCardiosession Load (0.000312)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 3) [0m
+  [4;36;1mUser Load (0.000403)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/cardio
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00028)
+Rendered cardio/_sessionForm (0.00469)
+Completed in 0.02667 (37 reqs/sec) | Rendering: 0.00786 (29%) | DB: 0.00144 (5%) | 200 OK [http://0.0.0.0/cardio/edit?sessionid=3]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:27:22) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"99"}
+  [4;35;1mUser Load (0.000287)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000408)[0m   [0;1mSELECT * FROM cardiotypes [0m
+  [4;35;1mCardiosession Load (0.000149)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 99) [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Cardiosession with ID=99):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1267:in `find_one'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1250:in `find_from_ids'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:504:in `find'
+    /app/controllers/cardio_controller.rb:12:in `edit'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:28:36) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"15"}
+  [4;36;1mUser Load (0.000293)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000439)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000158)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 15) [0m
+Redirected to http://0.0.0.0:3000/cardio/unauthorised
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.user):
+    /app/controllers/cardio_controller.rb:17:in `edit'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:29:13) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"15"}
+  [4;35;1mUser Load (0.000296)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000363)[0m   [0;1mSELECT * FROM cardiotypes [0m
+  [4;35;1mCardiosession Load (0.000148)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 15) [0m
+Redirected to http://0.0.0.0:3000/cardio/unauthorised
+Completed in 0.01589 (62 reqs/sec) | DB: 0.00081 (5%) | 302 Found [http://0.0.0.0/cardio/edit?sessionid=15]
+
+
+Processing CardioController#unauthorised (for 127.0.0.1 at 2008-01-12 20:29:14) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"unauthorised", "controller"=>"cardio"}
+  [4;36;1mUser Load (0.000333)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+Rendering template within layouts/cardio
+Rendering cardio/unauthorised
+Completed in 0.01321 (75 reqs/sec) | Rendering: 0.00324 (24%) | DB: 0.00033 (2%) | 200 OK [http://0.0.0.0/cardio/unauthorised]
+
+
+Processing CardioController#unauthorised (for 127.0.0.1 at 2008-01-12 20:29:15) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"url"=>{"action"=>"index"}, "action"=>"unauthorised", "controller"=>"cardio"}
+  [4;35;1mUser Load (0.000449)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+Rendering template within layouts/cardio
+Rendering cardio/unauthorised
+Completed in 0.06104 (16 reqs/sec) | Rendering: 0.00277 (4%) | DB: 0.00045 (0%) | 200 OK [http://0.0.0.0/cardio/unauthorised?url%5Baction%5D=index]
+
+
+Processing CardioController#unauthorised (for 127.0.0.1 at 2008-01-12 20:29:18) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"url"=>{"action"=>"index"}, "action"=>"unauthorised", "controller"=>"cardio"}
+  [4;36;1mUser Load (0.000310)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+Rendering template within layouts/cardio
+Rendering cardio/unauthorised
+Completed in 0.01151 (86 reqs/sec) | Rendering: 0.00265 (23%) | DB: 0.00031 (2%) | 200 OK [http://0.0.0.0/cardio/unauthorised?url%5Baction%5D=index]
+
+
+Processing CardioController#unauthorised (for 127.0.0.1 at 2008-01-12 20:30:42) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"url"=>{"action"=>"index"}, "action"=>"unauthorised", "controller"=>"cardio"}
+  [4;35;1mUser Load (0.000298)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+Rendering template within layouts/cardio
+Rendering cardio/unauthorised
+Completed in 0.01180 (84 reqs/sec) | Rendering: 0.00280 (23%) | DB: 0.00030 (2%) | 200 OK [http://0.0.0.0/cardio/unauthorised?url%5Baction%5D=index]
+
+
+Processing CardioController#index (for 127.0.0.1 at 2008-01-12 20:30:44) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"index", "controller"=>"cardio"}
+  [4;36;1mUser Load (0.000352)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiosession Load (0.002095)[0m   [0mSELECT * FROM cardiosessions ORDER BY workoutdate desc[0m
+Rendering template within layouts/cardio
+Rendering cardio/index
+  [4;36;1mCardiotype Load (0.000272)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00828)
+  [4;35;1mCardiotype Load (0.000258)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00154)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00117)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00150)
+  [4;36;1mCardiotype Load (0.000293)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00138)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00101)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00094)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00094)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00093)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00092)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00093)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00091)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00093)
+Completed in 0.04183 (23 reqs/sec) | Rendering: 0.02586 (61%) | DB: 0.00327 (7%) | 200 OK [http://0.0.0.0/cardio]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:30:46) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"12"}
+  [4;35;1mUser Load (0.000297)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000388)[0m   [0;1mSELECT * FROM cardiotypes [0m
+  [4;35;1mCardiosession Load (0.000302)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 12) [0m
+  [4;36;1mUser Load (0.000269)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/cardio
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00032)
+Rendered cardio/_sessionForm (0.00559)
+Completed in 0.02620 (38 reqs/sec) | Rendering: 0.00882 (33%) | DB: 0.00126 (4%) | 200 OK [http://0.0.0.0/cardio/edit?sessionid=12]
+
+
+Processing CardioController#edit (for 127.0.0.1 at 2008-01-12 20:30:50) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"19"}
+  [4;35;1mUser Load (0.000292)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000377)[0m   [0;1mSELECT * FROM cardiotypes [0m
+  [4;35;1mCardiosession Load (0.000147)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 19) [0m
+Redirected to http://0.0.0.0:3000/cardio/unauthorised
+Completed in 0.01585 (63 reqs/sec) | DB: 0.00082 (5%) | 302 Found [http://0.0.0.0/cardio/edit?sessionid=19]
+
+
+Processing CardioController#unauthorised (for 127.0.0.1 at 2008-01-12 20:30:50) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"unauthorised", "controller"=>"cardio"}
+  [4;36;1mUser Load (0.000346)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+Rendering template within layouts/cardio
+Rendering cardio/unauthorised
+Completed in 0.01257 (79 reqs/sec) | Rendering: 0.00293 (23%) | DB: 0.00035 (2%) | 200 OK [http://0.0.0.0/cardio/unauthorised]
+
+
+Processing CardioController#index (for 127.0.0.1 at 2008-01-12 20:30:53) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlNDAyMDU0NWNlZWViMjcyMjJlZjgzYzYwMTkyMGJl%0ANzk6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9c0279276d8846a5499b2ab7ad4cfa0953483176
+  Parameters: {"action"=>"index", "controller"=>"cardio"}
+  [4;35;1mUser Load (0.000324)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiosession Load (0.002282)[0m   [0;1mSELECT * FROM cardiosessions ORDER BY workoutdate desc[0m
+Rendering template within layouts/cardio
+Rendering cardio/index
+  [4;35;1mCardiotype Load (0.000279)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00782)
+  [4;36;1mCardiotype Load (0.000248)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00146)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00140)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00098)
+  [4;35;1mCardiotype Load (0.000319)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00139)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00106)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00101)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00100)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00099)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00100)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+Rendered cardio/_session (0.00099)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00101)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00109)
+Completed in 0.08133 (12 reqs/sec) | Rendering: 0.06563 (80%) | DB: 0.00345 (4%) | 200 OK [http://0.0.0.0/cardio]

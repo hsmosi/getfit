@@ -4,7 +4,7 @@ class UserTest < Test::Unit::TestCase
   # Be sure to include AuthenticatedTestHelper in test/test_helper.rb instead.
   # Then, you can remove it from this and the functional test.
   include AuthenticatedTestHelper
-  fixtures :users
+  fixtures :users, :cardiosessions
 
   def test_should_create_user
     assert_difference User, :count do
@@ -66,6 +66,11 @@ class UserTest < Test::Unit::TestCase
     assert_not_nil users(:quentin).remember_token
     users(:quentin).forget_me
     assert_nil users(:quentin).remember_token
+  end
+  
+  def test_user_to_cardiosession_relationship
+    user = users(:quentin)
+    assert_equal(user.cardiosessions.length, 2)
   end
 
   protected

@@ -19,5 +19,15 @@ quentinswim:
   distance: 2
   workoutdate: <%= Time.now %>
   timetaken: <%= Time.parse("00:10:00") %>
+  cardiotype_id: 2
   comments: It hurt it hurt
   user_id: 1
+
+aaroncycle:
+  id: 3
+  distance: 2
+  workoutdate: <%= Time.now %>
+  timetaken: <%= Time.parse("00:30:00") %>
+  cardiotype_id: 3
+  comments: Ow ow ow
+  user_id: 2
