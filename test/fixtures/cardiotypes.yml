@@ -5,3 +5,16 @@
 #
 # two:
 #   column: value
+
+run:
+  id: 1
+  description: Run
+  
+swim:
+  id: 2
+  description: Swim
+ 
+cycle:
+  id: 3
+  description: Cycle
+    

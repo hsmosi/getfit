@@ -15,7 +15,7 @@ class CardiosessionTest < ActiveSupport::TestCase
   end
   
   def test_relationships
-    assert_equal(@quentin.cardiosessions.count, 1)
+    assert_equal(@quentin.cardiosessions.count, 2)
     assert_equal(@session.user, @quentin)
   end
   

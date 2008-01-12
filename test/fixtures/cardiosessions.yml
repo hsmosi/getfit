@@ -14,3 +14,10 @@ quentinrun:
   comments: Some comment
   user_id: 1
  
+quentinswim:
+  id: 2
+  distance: 2
+  workoutdate: <%= Time.now %>
+  timetaken: <%= Time.parse("00:10:00") %>
+  comments: It hurt it hurt
+  user_id: 1

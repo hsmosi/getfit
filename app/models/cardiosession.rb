@@ -5,6 +5,7 @@ class Cardiosession < ActiveRecord::Base
   validates_presence_of :distance, :message => "Distance is required"
   validates_presence_of :timetaken, :message => "Time taken is required"
   validates_presence_of :workoutdate, :message => "Workout date is required"
+  validates_presence_of :user, :message => "Must be associated with a user"
   
   def timetakenastext=(text)
     self.timetaken = nil
