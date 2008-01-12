@@ -1,3 +1,5 @@
+require 'active_record/fixtures'
+
 class CreateCardiotypes < ActiveRecord::Migration
   def self.up
     create_table :cardiotypes do |t|
@@ -5,9 +7,11 @@ class CreateCardiotypes < ActiveRecord::Migration
       t.timestamps
     end
     
-    Cardiotype.create :description => "Run"
-    Cardiotype.create :description => "Swim"
-    Cardiotype.create :description => "Cycle"
+    Fixtures.create_fixtures('test/fixtures', File.basename("cardiotypes.yml", '.*'))
+    
+    #Cardiotype.create :description => "Run"
+    #Cardiotype.create :description => "Swim"
+    #Cardiotype.create :description => "Cycle"
   end
 
   def self.down

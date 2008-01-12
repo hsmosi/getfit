@@ -2,31 +2,30 @@ class CardioController < ApplicationController
   before_filter :login_required
   
   def index
-    @session = nil
+    @currentsession = nil
     @sessions = Cardiosession.find(:all, :order => "workoutdate desc")
   end
   
   def edit
-    if params[:session].nil?
-      @session = Cardiosession.find(params[:sessionid])
+    @cardiotypes = Cardiotype.find(:all)
+    if params[:currentsession].nil?
+      @currentsession = Cardiosession.find(params[:sessionid])
     else
-      @session = Cardiosession.new(params[:session])
-      if (@session.valid?)
-        @session.save
-        redirect_to :action => "index"
-      end
+      @currentsession = Cardiosession.update(params[:currentsession][:id], params[:currentsession])
+      redirect_to :action => "index" if (@currentsession.valid?)
     end
   end
   
   def new
-    if params[:session] == nil
-      @session = Cardiosession.new
-      @session.workoutdate = Date.today
+    @cardiotypes = Cardiotype.find(:all)
+    if params[:currentsession].nil?
+      @currentsession = Cardiosession.new
+      @currentsession.workoutdate = Date.today
     else
-      @session = Cardiosession.new(params[:session])
-      @session.user = self.current_user
-      if @session.valid?
-        @session.save
+      @currentsession = Cardiosession.new(params[:currentsession])
+      @currentsession.user = self.current_user
+      if @currentsession.valid?
+        @currentsession.save
         redirect_to :action => "index"
       end
     end

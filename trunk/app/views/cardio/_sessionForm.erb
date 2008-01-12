@@ -1,8 +1,13 @@
-<% form_for :session, @session, :url => { :action => "new" }, :html => { :id => "session" } do |f| %>
+<% form_for :currentsession, @currentsession, :html => { :id => "sessionform" } do |f| %>
+<%= f.hidden_field(:id) %>
 <table cellpadding="0" cellspacing="0">
 	<tr>
 		<td>Date</td>
 		<td><%= f.date_select(:workoutdate) %></td>
+	</tr>
+	<tr>
+		<td>Type</td>
+		<td><%= collection_select(:currentsession, :cardiotype_id, @cardiotypes, "id", "description") %></td>
 	</tr>
 	<tr>
 		<td>Distance</td>
@@ -17,9 +22,9 @@
 		<td><%= f.text_area(:comments) %></td>
 	</tr>
 </table>
-<%= content_tag('div', render(:partial => "sessionErrors") ) if !@session.errors.nil? %>
+<%= content_tag('div', render(:partial => "sessionErrors") ) if !@currentsession.errors.nil? %>
 <div class='buttonwrapper'>
-	<a class='ovalbutton' href='#' onclick="$('session').submit()"><span>Save</span></a>
+	<a class='ovalbutton' href='#' onclick="$('sessionform').submit()"><span>Save</span></a>
 	<a class='ovalbutton' href='<%= url_for(:action => "index")%>' style="margin-left: 0.5em"><span>Back</span></a>
 </div>
 <% end -%>
