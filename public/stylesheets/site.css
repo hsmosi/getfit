@@ -1,7 +1,93 @@
 body
 {
 	font-family: helvetica;
+	font-size: smaller;
 	color: black;
+	padding: 0px;
+	margin: 0px;
+	background-color: #DFDFDF;
+}
+
+div.top
+{
+	background-color: #101A63;
+	padding-top: 0.75em;
+	padding-left: 2em;
+	padding-right: 0.5em;
+}
+
+div.title
+{
+	color: yellow;
+	font-size: larger;
+	font-style: italic;
+	margin-bottom: 0.5em;
+}
+
+span.currenttab
+{
+	background-color: #DFDFDF;
+	padding-top: 0.22em;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	color: #177927;
+}
+
+span.currenttab a
+{
+	color: #177927;
+	text-decoration: none;
+	padding-top: 0.22em;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+}
+
+span.tab
+{
+	background-color: #4955AC;
+	padding-top: 0.22em;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	color: #BFBFBF;
+}
+
+span.tab a
+{
+	color: #BFBFBF;
+	padding-top: 0.22em;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	text-decoration: none;
+}
+
+div.page
+{
+	clear: both;
+	margin: 1em 2em 1em 2em;
+	padding: 1em;
+	background-color: white;
+	min-height: 550px;
+}
+
+div.left
+{
+	background-color: #FFFBDB;
+	float: left;
+	width: 50%;	
+}
+
+div.right
+{
+	background-color: #FFDBDB;
+	float: right;
+	width: 49%;
+}
+
+div.graph
+{
+	background-color: #FFF9CA;
+	width: 100%;
+	text-align: center;
 }
 
 a
@@ -28,24 +114,9 @@ tr
 	padding: 0.2em;
 }
 
-tr.alternate
-{
-	padding: 0.2em;
-}
-
 td
 {
 	padding: 0.2em;
-}
-
-div.cardio
-{
-	background-color: white;
-}
-
-div.cardio
-{
-	background-color: white;
 }
 
 table
@@ -53,15 +124,16 @@ table
 	padding: 0.1em;
 }
 
-div.title
-{
-	width: 100%;
-	font-size: larger;
-	margin-bottom: 1em;
-}
-
 span.error
 {
 	color: red;
 	display: block;
+}
+
+h1
+{
+	font-size: larger;
+	font-style: italic;
+	margin-bottom: 0.5em;
+	padding-bottom: 0px;
 }

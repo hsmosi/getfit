@@ -1,6 +1,6 @@
 class BodyController < ApplicationController
   before_filter :login_required
-  layout "cardio"
+  layout "site"
 
   def index
     @bodies = Body.bodies_for_user(self.current_user)

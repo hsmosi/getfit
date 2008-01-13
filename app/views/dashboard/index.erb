@@ -1,0 +1,40 @@
+<div class="left">
+	<h1>Cardio History</h1>
+	<div class="graph" style="text-align: left; height: 400px">
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="100%" height="400" id="Line" >
+		         <param name="movie" value="/FusionCharts/FCF_Line.swf" />
+		         <param name="FlashVars" value="&dataURL=<%= url_for(:action=>"cardioGraphData") %>&chartHeight=400" />
+		         <param name="quality" value="high" />
+			<embed src="/FusionCharts/FCF_Line.swf" flashVars="&dataURL=<%= url_for(:action=>"cardioGraphData") %>&chartHeight=400" quality="high" width="100%" height="400" name="Line" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	    </object>
+	</div>
+	<table>
+		<% @cardioSessions.each do |s| %>
+			<tr>
+				<td><%= link_to s.workoutdate.strftime("%A %d %B"), { :action => "edit", :controller => "cardio", :sessionid => s.id } %></td>
+				<td><%= s.cardiotype.description %></td>
+				<td align="right"><%= s.distance %></td>
+				<td align="right"><%= s.timetakenastext %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>
+<div class="right">
+	<h1>Body Mass History</h1>
+	<div class="graph" style="text-align: left; height: 400px; width: 100%">
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="100%" height="400" id="Line" >
+		         <param name="movie" value="/FusionCharts/FCF_Line.swf" />
+		         <param name="FlashVars" value="&dataURL=<%= url_for(:action=>"bodyGraphData") %>&chartHeight=400" />
+		         <param name="quality" value="high" />
+			<embed src="/FusionCharts/FCF_Line.swf" flashVars="&dataURL=<%= url_for(:action=>"bodyGraphData") %>&chartHeight=400" quality="high" height="400" name="Line" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	    </object>
+	</div>
+	<table>
+		<% @bodyStats.each do |b| %>
+			<tr>
+				<td><%= link_to b.measurementdate.strftime("%A %d %B"), { :action => "edit", :controller => "body", :bodyid => b.id } %></td>
+				<td><%= b.weight %>kg</td>
+			</tr>
+		<% end %>
+	</table>
+</div>

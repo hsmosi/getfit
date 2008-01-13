@@ -36,7 +36,20 @@ class Cardiosession < ActiveRecord::Base
     r
   end
   
+  def time_in_seconds
+    (self.timetaken.hour * 60 + self.timetaken.min) * 60 + self.timetaken.sec
+  end
+  
   def self.sessions_for_user(user)
     self.find(:all, :conditions => "user_id = #{user.id}", :order => "workoutdate desc")
+  end
+  
+  def self.top_five(user)
+    self.find(:all, :conditions => "user_id = #{user.id}", :order => "workoutdate desc", :limit => 5)
+  end
+  
+  def self.last_month(user)
+    self.find(:all, :conditions => "user_id = #{user.id}", :order => "workoutdate")
+    # unfinished
   end
 end
