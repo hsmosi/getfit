@@ -9,4 +9,13 @@ class Body < ActiveRecord::Base
   def self.bodies_for_user(user)
     self.find(:all, :conditions => "user_id = #{user.id}", :order => "measurementdate desc")
   end
+  
+  def self.top_five(user)
+    self.find(:all, :conditions => "user_id = #{user.id}", :order => "measurementdate desc", :limit => 5)
+  end
+  
+  def self.last_month(user)
+    self.find(:all, :conditions => "user_id = #{user.id}", :order => "measurementdate")
+    # unfinished
+  end
 end

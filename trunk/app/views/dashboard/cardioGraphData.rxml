@@ -1,0 +1,6 @@
+xml.instruct! :xml, :version=>"1.0"
+xml.graph (:animation => "0", :bgColor => "FFFBDB", :showNames => "0", :decimalPrecision => "0", :formatNumberScale => "0", :yAxisMinValue => "#{@minValue}", :yAxisMaxValue => "#{@maxValue}", :showValues => "0") do
+  @cardioSessions.each do |c|
+    xml.set(:value => c.time_in_seconds)
+  end
+end

@@ -1,5 +1,6 @@
 class CardioController < ApplicationController
   before_filter :login_required
+  layout "site"
   
   def index
     @currentsession = nil
