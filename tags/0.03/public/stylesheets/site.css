@@ -1,0 +1,67 @@
+body
+{
+	font-family: helvetica;
+	color: black;
+}
+
+a
+{
+	color: darkblue;
+	text-decoration: none;
+}
+
+a img
+{
+	border: 0px;
+}
+
+th
+{
+	font-weight: normal;
+	text-decoration: underline;
+	text-align: left;
+	padding: 0.2em;
+}
+
+tr
+{
+	padding: 0.2em;
+}
+
+tr.alternate
+{
+	padding: 0.2em;
+}
+
+td
+{
+	padding: 0.2em;
+}
+
+div.cardio
+{
+	background-color: white;
+}
+
+div.cardio
+{
+	background-color: white;
+}
+
+table
+{
+	padding: 0.1em;
+}
+
+div.title
+{
+	width: 100%;
+	font-size: larger;
+	margin-bottom: 1em;
+}
+
+span.error
+{
+	color: red;
+	display: block;
+}
