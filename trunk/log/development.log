@@ -24018,3 +24018,133 @@ Completed in 0.01771 (56 reqs/sec) | Rendering: 0.00492 (27%) | DB: 0.00101 (5%)
   [4;36;1mSQL (0.001741)[0m   [0;1mCREATE TABLE schema_info (version integer)[0m
   [4;35;1mSQL (0.001541)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
   [4;36;1mSQL (0.001961)[0m   [0;1mUPDATE schema_info SET version = 5[0m
+
+
+Processing BodyController#index (for 127.0.0.1 at 2008-01-13 13:09:52) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--13628a9b162d4d7fda971c5890656b73464045e4
+  Parameters: {"action"=>"index", "controller"=>"body"}
+  [4;36;1mUser Load (0.000331)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mBody Load (0.000768)[0m   [0mSELECT * FROM bodies WHERE (user_id = 1) ORDER BY measurementdate desc[0m
+Rendering template within layouts/cardio
+Rendering body/index
+Rendered body/_body (0.00398)
+Completed in 0.02476 (40 reqs/sec) | Rendering: 0.00952 (38%) | DB: 0.00110 (4%) | 200 OK [http://0.0.0.0/body]
+
+
+Processing BodyController#new (for 127.0.0.1 at 2008-01-13 13:09:54) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ba8390c35e1210a12dab7a26ec86cba0166bc557
+  Parameters: {"action"=>"new", "controller"=>"body"}
+  [4;36;1mUser Load (0.000315)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+Rendering template within layouts/cardio
+Rendering body/new
+Rendered body/_bodyErrors (0.00073)
+Rendered body/_bodyForm (0.00348)
+Completed in 0.01963 (50 reqs/sec) | Rendering: 0.00660 (33%) | DB: 0.00031 (1%) | 200 OK [http://0.0.0.0/body/new]
+
+
+Processing BodyController#new (for 127.0.0.1 at 2008-01-13 13:09:57) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--13628a9b162d4d7fda971c5890656b73464045e4
+  Parameters: {"authenticity_token"=>"8ce4db6953adc4b23d379193bdf25f49fa27dabd", "action"=>"new", "currentbody"=>{"weight"=>"z", "id"=>"", "measurementdate(1i)"=>"2008", "measurementdate(2i)"=>"1", "measurementdate(3i)"=>"13"}, "controller"=>"body"}
+  [4;35;1mUser Load (0.000286)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+Rendering template within layouts/cardio
+Rendering body/new
+Rendered body/_bodyErrors (0.00024)
+Rendered body/_bodyForm (0.00165)
+Completed in 0.01775 (56 reqs/sec) | Rendering: 0.00325 (18%) | DB: 0.00029 (1%) | 200 OK [http://0.0.0.0/body/new]
+
+
+Processing BodyController#new (for 127.0.0.1 at 2008-01-13 13:10:00) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ba8390c35e1210a12dab7a26ec86cba0166bc557
+  Parameters: {"authenticity_token"=>"8ce4db6953adc4b23d379193bdf25f49fa27dabd", "action"=>"new", "currentbody"=>{"weight"=>"105", "id"=>"", "measurementdate(1i)"=>"2008", "measurementdate(2i)"=>"1", "measurementdate(3i)"=>"13"}, "controller"=>"body"}
+  [4;36;1mUser Load (0.000282)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mBody Create (0.000368)[0m   [0mINSERT INTO bodies ("updated_at", "weight", "measurementdate", "user_id", "created_at") VALUES('2008-01-13 13:10:01', 105, '2008-01-13', 1, '2008-01-13 13:10:01')[0m
+Redirected to http://0.0.0.0:3000/body
+Completed in 0.06187 (16 reqs/sec) | DB: 0.00065 (1%) | 302 Found [http://0.0.0.0/body/new]
+
+
+Processing BodyController#index (for 127.0.0.1 at 2008-01-13 13:10:01) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--13628a9b162d4d7fda971c5890656b73464045e4
+  Parameters: {"action"=>"index", "controller"=>"body"}
+  [4;36;1mUser Load (0.000333)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mBody Load (0.000829)[0m   [0mSELECT * FROM bodies WHERE (user_id = 1) ORDER BY measurementdate desc[0m
+Rendering template within layouts/cardio
+Rendering body/index
+Rendered body/_body (0.00240)
+Rendered body/_body (0.00072)
+Completed in 0.02053 (48 reqs/sec) | Rendering: 0.00595 (28%) | DB: 0.00116 (5%) | 200 OK [http://0.0.0.0/body]
+
+
+Processing BodyController#edit (for 127.0.0.1 at 2008-01-13 13:10:08) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ba8390c35e1210a12dab7a26ec86cba0166bc557
+  Parameters: {"action"=>"edit", "controller"=>"body", "bodyid"=>"5"}
+  [4;36;1mUser Load (0.000334)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mBody Load (0.000266)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 5) [0m
+  [4;36;1mUser Load (0.000266)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/cardio
+Rendering body/edit
+Rendered body/_bodyErrors (0.00024)
+Rendered body/_bodyForm (0.00241)
+Completed in 0.01909 (52 reqs/sec) | Rendering: 0.00520 (27%) | DB: 0.00087 (4%) | 200 OK [http://0.0.0.0/body/edit?bodyid=5]
+
+
+Processing BodyController#edit (for 127.0.0.1 at 2008-01-13 13:10:11) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--13628a9b162d4d7fda971c5890656b73464045e4
+  Parameters: {"authenticity_token"=>"8ce4db6953adc4b23d379193bdf25f49fa27dabd", "action"=>"edit", "currentbody"=>{"weight"=>"210", "id"=>"5", "measurementdate(1i)"=>"2008", "measurementdate(2i)"=>"1", "measurementdate(3i)"=>"13"}, "controller"=>"body"}
+  [4;35;1mUser Load (0.000356)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mBody Load (0.000261)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 5) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000305)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mBody Update (0.000496)[0m   [0;1mUPDATE bodies SET "created_at" = '2008-01-13 11:50:37', "weight" = 210, "measurementdate" = '2008-01-13', "updated_at" = '2008-01-13 13:10:11', "user_id" = 1 WHERE "id" = 5[0m
+Redirected to http://0.0.0.0:3000/body
+Completed in 0.03199 (31 reqs/sec) | DB: 0.00142 (4%) | 302 Found [http://0.0.0.0/body/edit]
+
+
+Processing BodyController#index (for 127.0.0.1 at 2008-01-13 13:10:11) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ba8390c35e1210a12dab7a26ec86cba0166bc557
+  Parameters: {"action"=>"index", "controller"=>"body"}
+  [4;35;1mUser Load (0.000294)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mBody Load (0.000739)[0m   [0;1mSELECT * FROM bodies WHERE (user_id = 1) ORDER BY measurementdate desc[0m
+Rendering template within layouts/cardio
+Rendering body/index
+Rendered body/_body (0.00232)
+Rendered body/_body (0.00073)
+Completed in 0.01943 (51 reqs/sec) | Rendering: 0.00578 (29%) | DB: 0.00103 (5%) | 200 OK [http://0.0.0.0/body]
+
+
+Processing BodyController#edit (for 127.0.0.1 at 2008-01-13 13:10:14) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--13628a9b162d4d7fda971c5890656b73464045e4
+  Parameters: {"action"=>"edit", "controller"=>"body", "bodyid"=>"7"}
+  [4;35;1mUser Load (0.000286)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mBody Load (0.000258)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 7) [0m
+  [4;35;1mUser Load (0.000272)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/cardio
+Rendering body/edit
+Rendered body/_bodyErrors (0.00027)
+Rendered body/_bodyForm (0.00271)
+Completed in 0.01882 (53 reqs/sec) | Rendering: 0.00522 (27%) | DB: 0.00082 (4%) | 200 OK [http://0.0.0.0/body/edit?bodyid=7]
+
+
+Processing BodyController#edit (for 127.0.0.1 at 2008-01-13 13:10:16) [POST]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ba8390c35e1210a12dab7a26ec86cba0166bc557
+  Parameters: {"authenticity_token"=>"8ce4db6953adc4b23d379193bdf25f49fa27dabd", "action"=>"edit", "currentbody"=>{"weight"=>"95", "id"=>"7", "measurementdate(1i)"=>"2008", "measurementdate(2i)"=>"1", "measurementdate(3i)"=>"13"}, "controller"=>"body"}
+  [4;36;1mUser Load (0.000324)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mBody Load (0.000324)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 7) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mUser Load (0.000323)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mBody Update (0.000512)[0m   [0mUPDATE bodies SET "created_at" = '2008-01-13 13:10:01', "weight" = 95, "measurementdate" = '2008-01-13', "updated_at" = '2008-01-13 13:10:16', "user_id" = 1 WHERE "id" = 7[0m
+Redirected to http://0.0.0.0:3000/body
+Completed in 0.02168 (46 reqs/sec) | DB: 0.00148 (6%) | 302 Found [http://0.0.0.0/body/edit]
+
+
+Processing BodyController#index (for 127.0.0.1 at 2008-01-13 13:10:16) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTc0MzVmOTQ5NmJiOThiOGIxYWJlZDBkYWNjZGMx%0AOWM6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--13628a9b162d4d7fda971c5890656b73464045e4
+  Parameters: {"action"=>"index", "controller"=>"body"}
+  [4;36;1mUser Load (0.000286)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mBody Load (0.000702)[0m   [0mSELECT * FROM bodies WHERE (user_id = 1) ORDER BY measurementdate desc[0m
+Rendering template within layouts/cardio
+Rendering body/index
+Rendered body/_body (0.00271)
+Rendered body/_body (0.00106)
+Completed in 0.01903 (52 reqs/sec) | Rendering: 0.00691 (36%) | DB: 0.00099 (5%) | 200 OK [http://0.0.0.0/body]
