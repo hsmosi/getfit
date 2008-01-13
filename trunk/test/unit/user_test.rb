@@ -71,6 +71,17 @@ class UserTest < Test::Unit::TestCase
   def test_user_to_cardiosession_relationship
     user = users(:quentin)
     assert_equal(user.cardiosessions.length, 2)
+    
+    user = users(:aaron)
+    assert_equal(user.cardiosessions.length, 1)
+  end
+  
+  def test_user_to_body_relationship
+    user = users(:quentin)
+    assert_equal(user.cardiosessions.length, 2)
+    
+    user = users(:aaron)
+    assert_equal(user.cardiosessions.length, 1)
   end
 
   protected

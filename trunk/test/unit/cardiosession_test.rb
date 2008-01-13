@@ -1,7 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class CardiosessionTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
   fixtures :cardiotypes, :users, :cardiosessions
   
   def setup
@@ -26,36 +25,36 @@ class CardiosessionTest < ActiveSupport::TestCase
     assert_equal(@swim_session.cardiotype, @swim)
   end
   
-  def test_fixturevalid
+  def test_fixture_valid
     assert(@run_session.valid?)
   end
   
-  def test_invaliddistance
+  def test_invalid_distance
     @run_session.distance = "a"
     assert(!@run_session.valid?)
   end
   
-  def test_invalidtimetakenastext
+  def test_invalid_time_taken_as_text
     @run_session.timetakenastext= "a"
     assert(!@run_session.valid?)
   end
   
-  def test_invalidtimetakenastext_hours
+  def test_invalid_time_taken_as_text_hours
     @run_session.timetakenastext = "24:00:00"
     assert_nil(@run_session.timetaken)
   end
   
-  def test_invalidtimetakenastext_minutes
+  def test_invalid_time_taken_as_text_minutes
     @run_session.timetakenastext = "61:00"
     assert_nil(@run_session.timetaken)
   end
   
-  def test_invalidtimetakenastext_seconds
+  def test_invalid_time_taken_as_text_seconds
     @run_session.timetakenastext = "61"
     assert_nil(@run_session.timetaken)
   end
   
-  def test_texttotime_sec
+  def test_text_to_time_sec
     @run_session.timetakenastext = "10"
     assert_not_nil(@run_session.timetaken)
     assert_equal(@run_session.timetaken.hour, 0)
@@ -63,7 +62,7 @@ class CardiosessionTest < ActiveSupport::TestCase
     assert_equal(@run_session.timetaken.sec, 10)
   end
   
-  def test_texttotime_minsec
+  def test_text_to_time_minsec
     @run_session.timetakenastext = "12:34"
     assert_not_nil(@run_session.timetaken)
     assert_equal(@run_session.timetaken.hour, 0)

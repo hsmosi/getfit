@@ -3,7 +3,7 @@ class CardioController < ApplicationController
   
   def index
     @currentsession = nil
-    @sessions = Cardiosession.find(:all, :conditions => "user_id = #{self.current_user.id}", :order => "workoutdate desc")
+    @sessions = Cardiosession.sessions_for_user(self.current_user)
   end
   
   def edit
@@ -42,7 +42,19 @@ class CardioController < ApplicationController
   end
   
   def delete
-    Cardiosession.delete(params[:sessionid])
+    begin
+      session = Cardiosession.find(params[:sessionid])
+    rescue
+      redirect_to :action => "unauthorised"
+      return
+    end
+    
+    if session.user != self.current_user
+      redirect_to :action => "unauthorised"
+      return
+    end
+    
+    Cardiosession.delete(session.id)
     redirect_to :action => "index"
   end
 end

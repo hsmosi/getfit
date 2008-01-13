@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class CardiotypeTest < ActiveSupport::TestCase
-  fixtures :cardiotypes, :cardiotypes
+  fixtures :cardiotypes
   
   def setup
     @run = cardiotypes(:run)
@@ -19,7 +19,7 @@ class CardiotypeTest < ActiveSupport::TestCase
   def test_relationship_to_cardiosession
     assert_equal(@run.cardiosessions.length, 1)
     assert_equal(@swim.cardiosessions.length, 1)
-    assert_equal(@cycle.cardiosessions.length, 0)
+    assert_equal(@cycle.cardiosessions.length, 1)
   end
 end
 

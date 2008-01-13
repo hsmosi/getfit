@@ -2,6 +2,7 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
   # Extensions for this model
   has_many :cardiosessions
+  has_many :bodies
 
   # Virtual attribute for the unencrypted password
   attr_accessor :password
