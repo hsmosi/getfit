@@ -70,4 +70,36 @@ class CardioControllerTest < ActionController::TestCase
     assert_equal(saved_session.distance, run_session.distance)
     assert_equal(original_row_count, Cardiosession.find(:all).length)
   end
+  
+  def test_delete_succeed
+    original_row_count = Cardiosession.find(:all).length
+    run_session = cardiosessions(:quentinrun)
+    login_as(:quentin)
+    
+    get :delete, :sessionid => run_session.id
+
+    assert_response(:redirect)
+    assert_equal(original_row_count - 1, Cardiosession.find(:all).length)
+  end
+  
+  def test_delete_failed_missing_body
+    original_row_count = Cardiosession.find(:all).length
+    login_as(:quentin)
+    
+    get :delete, :sessionid => 999
+
+    assert_response(:redirect)
+    assert_equal(original_row_count, Cardiosession.find(:all).length)
+  end
+  
+  def test_delete_failed_missing_body
+    original_row_count = Cardiosession.find(:all).length
+    cycle_session = cardiosessions(:aaroncycle)
+    login_as(:quentin)
+    
+    get :delete, :sessionid => cycle_session.id
+
+    assert_response(:redirect)
+    assert_equal(original_row_count, Cardiosession.find(:all).length)
+  end
 end

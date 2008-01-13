@@ -54,7 +54,7 @@
 	<!-- Date: 2008-01-08 -->
 </head>
 <body>
-	<div class="title">Get Fit <%= current_user.login %> - <%= Time.new.strftime("%A %d %B") %></div>
+	<div class="title">Get Fit <%= current_user.login if !current_user.nil? %> - <%= Time.new.strftime("%A %d %B") %></div>
 	<%= yield :layout %>
 </body>
 </html>

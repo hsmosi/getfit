@@ -35,4 +35,8 @@ class Cardiosession < ActiveRecord::Base
     end
     r
   end
+  
+  def self.sessions_for_user(user)
+    self.find(:all, :conditions => "user_id = #{user.id}", :order => "workoutdate desc")
+  end
 end

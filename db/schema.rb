@@ -9,7 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
+
+  create_table "bodies", :force => true do |t|
+    t.integer  "weight",          :null => false
+    t.date     "measurementdate", :null => false
+    t.integer  "user_id",         :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cardiosessions", :force => true do |t|
     t.integer  "distance",                     :null => false
