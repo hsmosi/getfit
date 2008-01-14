@@ -13,7 +13,7 @@ div.top
 	background-color: #101A63;
 	padding-top: 0.75em;
 	padding-left: 2em;
-	padding-right: 0.5em;
+	padding-right: 2em;
 }
 
 div.title
@@ -24,39 +24,48 @@ div.title
 	margin-bottom: 0.5em;
 }
 
-span.currenttab
+div.tabbar
 {
-	background-color: #DFDFDF;
-	padding-top: 0.22em;
-	padding-left: 0.75em;
-	padding-right: 0.75em;
-	color: #177927;
+	height: 1.6em;
+	margin: 0px;
+	padding: 0px;
 }
 
-span.currenttab a
+div.currenttab
+{
+	float: left;
+	background-color: #DFDFDF;
+	line-height: 1.6em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	vertical-align: bottom;
+	margin-right: 3px;
+	color: #BFBFBF;
+	height: 1.6em;
+}
+
+div.currenttab a
 {
 	color: #177927;
 	text-decoration: none;
-	padding-top: 0.22em;
-	padding-left: 0.75em;
-	padding-right: 0.75em;
 }
 
-span.tab
+div.tab
 {
+	float: left;
 	background-color: #4955AC;
-	padding-top: 0.22em;
-	padding-left: 0.75em;
-	padding-right: 0.75em;
+	line-height: 1.6em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	vertical-align: bottom;
+	margin-right: 3px;
 	color: #BFBFBF;
+	height: 1.6em;
 }
 
-span.tab a
+div.tab a
 {
 	color: #BFBFBF;
-	padding-top: 0.22em;
-	padding-left: 0.75em;
-	padding-right: 0.75em;
 	text-decoration: none;
 }
 
@@ -129,6 +138,8 @@ th
 	font-weight: bold;
 	text-align: left;
 	padding: 0.2em;
+	padding-right: 1em;
+	color: #555555;
 }
 
 tr
@@ -139,6 +150,7 @@ tr
 td
 {
 	padding: 0.2em;
+	padding-right: 1em;
 }
 
 table
@@ -160,4 +172,5 @@ h1
 	padding-top: 0px;
 	margin-bottom: 0.5em;
 	padding-bottom: 0px;
+	color: #555555;
 }

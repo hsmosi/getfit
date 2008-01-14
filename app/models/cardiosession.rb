@@ -44,6 +44,15 @@ class Cardiosession < ActiveRecord::Base
     self.time_in_seconds / distance
   end
   
+  def formatted_laptime
+    laptime = self.laptime_in_seconds
+    hours = laptime / (60 * 60 )
+    minutes = (laptime - (hours * 60 * 60)) / 60
+    seconds = laptime - (hours * 60 * 60) - (minutes * 60)
+    
+    "#{hours.to_s + ':' if hours != 0}#{minutes.to_s.rjust(2,'0') + ':' if minutes != 0}#{seconds.to_s.rjust(2,'0')}"
+  end
+  
   def self.sessions_for_user(user)
     self.find(:all, :conditions => "user_id = #{user.id}", :order => "workoutdate desc")
   end

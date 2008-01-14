@@ -1,11 +1,11 @@
 <div style="min-height: 400px; padding: 0px; margin: 0px;">
 <div class="graph" style="float:right; width: 400px">
-	<div><h1>Recent Runs - Laptime In Seconds</h1></div>
+	<div><h1><%= @graphCaption %></h1></div>
 	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="400" id="Line" >
 	         <param name="movie" value="/FusionCharts/FCF_Line.swf" />
-	         <param name="FlashVars" value="&dataURL=<%= url_for(:action=>"cardioGraphData", :graphtype => @graphtype) %>&chartWidth=400&chartHeight=300" />
+	         <param name="FlashVars" value="&dataURL=<%= @graphdataurl %>&chartWidth=400&chartHeight=300" />
 	         <param name="quality" value="high" />
-		<embed src="/FusionCharts/FCF_Line.swf" flashVars="&dataURL=<%= url_for(:action=>"cardioGraphData", :graphtype => @graphtype) %>&chartWidth=400&chartHeight=300" quality="high" width="400" height="300" name="Line" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		<embed src="/FusionCharts/FCF_Line.swf" flashVars="&dataURL=<%= @graphdataurl %>&chartWidth=400&chartHeight=300" quality="high" width="400" height="300" name="Line" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
     </object>
 	<%= link_to "Run", { :action => "index", :graphtype => "Run" }%>
 	<%= link_to "Swim", { :action => "index", :graphtype => "Swim" }%>
@@ -22,7 +22,7 @@
 			<th>Date</th>
 			<th>Type</th>
 			<th>Distance</th>
-			<th>Time</th>
+			<th>Total Time</th>
 			<th>Lap Time</th>
 		</tr>
 		<% @cardioSessions.each do |s| %>
@@ -31,7 +31,7 @@
 				<td><%= s.cardiotype.description %></td>
 				<td align="right"><%= s.distance %></td>
 				<td align="right"><%= s.timetakenastext %></td>
-				<td align="right"><%= s.laptime_in_seconds %></td>
+				<td align="right"><%= s.formatted_laptime %></td>
 			</tr>
 		<% end %>
 	</table>

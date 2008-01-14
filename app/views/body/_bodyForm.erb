@@ -11,8 +11,8 @@
 	</tr>
 </table>
 <%= content_tag('div', render(:partial => "bodyErrors") ) if !@currentbody.errors.nil? %>
-<div class='buttonwrapper'>
-	<a class='ovalbutton' href='#' onclick="$('bodyform').submit()"><span>Save</span></a>
-	<a class='ovalbutton' href='<%= url_for(:action => "index")%>' style="margin-left: 0.5em"><span>Back</span></a>
-</div>
+<p>
+	<a href='#' onclick="$('bodyform').submit()" class="action"><span>Save</span></a>
+	<a href='<%= @back %>' style="margin-left: 0.5em" class="action"><span>Back</span></a>
+</p>
 <% end -%>

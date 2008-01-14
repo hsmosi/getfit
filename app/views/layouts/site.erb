@@ -9,68 +9,29 @@
 	<meta name="author" content="James Randall">
 	<%= javascript_include_tag 'prototype' %>
 	<%= stylesheet_link_tag 'site', :media => "all" %>
-	<style type="text/css">
-
-	/*Credits: Dynamic Drive CSS Library */
-	/*URL: http://www.dynamicdrive.com/style/ */
-
-	a.ovalbutton{
-	background: transparent url('<%= image_path("oval-blue-left.gif")%>') no-repeat top left;
-	display: block;
-	float: left;
-	font: normal 13px Tahoma; /* Change 13px as desired */
-	line-height: 16px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 24px) */
-	height: 24px; /* Height of button background height */
-	padding-left: 11px; /* Width of left menu image */
-	text-decoration: none;
-	}
-
-	a:link.ovalbutton, a:visited.ovalbutton, a:active.ovalbutton{
-	color: #494949; /*button text color*/
-	}
-
-	a.ovalbutton span {
-	background: transparent url('<%= image_path("oval-blue-right.gif")%>') no-repeat top right;
-	display: block;
-	padding: 4px 11px 4px 0; /*Set 11px below to match value of 'padding-left' value above*/
-	}
-
-	a.ovalbutton:hover{ /* Hover state CSS */
-	background-position: bottom left;
-	}
-
-	a.ovalbutton:hover span{ /* Hover state CSS */
-	background-position: bottom right;
-	color: black;
-	}
-
-	.buttonwrapper{ /* Container you can use to surround a CSS button to clear float */
-	overflow: hidden; /*See: http://www.quirksmode.org/css/clearing.html */
-	width: 100%;
-	}
-
-	</style>
-	
 	<!-- Date: 2008-01-08 -->
 </head>
 <body>
 	<div class="top">
 		<div class="title">GetFit</div>
-		<span class="<%= case @controller.controller_name 
-		                      when "dashboard"
-			                       "currenttab"
-			                  else "tab"
-				          end%>"><%= link_to "Home", { :action => "index", :controller => "dashboard" }%></span>
-		<span class="<%= case @controller.controller_name 
-		                      when "cardio"
-			                       "currenttab"
-			                  else "tab"
-				          end%>"><%= link_to "Cardio", { :action => "index", :controller => "cardio" }%></span>
-		<span class="<%= case @controller.controller_name 
-		                      when "body"
-			                       "currenttab"
-			                  else "tab"
-				          end%>"><%= link_to "Body", { :action => "index", :controller => "body"}%></span>
+		<div class="tabbar">
+			<div class="<%= case @controller.controller_name 
+			                      when "dashboard"
+				                       "currenttab"
+				                  else "tab"
+					          end%>"><%= link_to "Home", { :action => "index", :controller => "dashboard" }%></div>
+			<div class="<%= case @controller.controller_name 
+			                      when "cardio"
+				                       "currenttab"
+				                  else "tab"
+					          end%>"><%= link_to "Cardio", { :action => "index", :controller => "cardio" }%></div>
+			<div class="<%= case @controller.controller_name 
+			                      when "body"
+				                       "currenttab"
+				                  else "tab"
+					          end%>"><%= link_to "Body", { :action => "index", :controller => "body"}%></div>
+			<div class="tab" style="float: right"><%= link_to "Logout", { :action => "logout", :controller => "account"}%></div>
+		</div>
 	</div>
 	<div class="page">
 		

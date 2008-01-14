@@ -3,10 +3,12 @@ class BodyController < ApplicationController
   layout "site"
 
   def index
+    session[:head] = "body"
     @bodies = Body.bodies_for_user(self.current_user)
   end
   
   def edit
+    @back = self.source_url
     if params[:currentbody].nil?
       begin
         @currentbody = Body.find(params[:bodyid])
@@ -21,11 +23,12 @@ class BodyController < ApplicationController
       end
     else
       @currentbody = Body.update(params[:currentbody][:id], params[:currentbody])
-      redirect_to :action => "index" if (@currentbody.valid?)
+      redirect_to @back if (@currentbody.valid?)
     end
   end
   
   def new
+    @back = self.source_url
     if params[:currentbody].nil?
       @currentbody = Body.new
       @currentbody.measurementdate = Date.today
@@ -34,7 +37,7 @@ class BodyController < ApplicationController
       @currentbody.user = self.current_user
       if @currentbody.valid?
         @currentbody.save
-        redirect_to :action => "index"
+        redirect_to @back
       end
     end
   end
@@ -53,6 +56,6 @@ class BodyController < ApplicationController
     end
     
     Body.delete(body.id)
-    redirect_to :action => "index"
+    redirect_to self.source_url
   end
 end

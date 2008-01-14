@@ -3,12 +3,33 @@ class DashboardController < ApplicationController
   layout "site"
   
   def index
+    session[:head] = self.controller_name
     @cardioSessions = Cardiosession.top_five(self.current_user)
     @bodyStats = Body.top_five(self.current_user)
     if (params[:graphtype].nil?)
       @graphtype = "Run"
     else
       @graphtype = params[:graphtype]
+    end
+    
+    case @graphtype
+      when "Run"
+        @graphCaption = "Recent Runs - Laptime in Seconds"
+        
+      when "Swim"
+        @graphCaption = "Recent Swims - Laptime in Seconds"
+        
+      when "Cycle"
+        @graphCaption = "Recent Cycling - Laptime in Seconds"
+      
+      when "Weight"
+        @graphCaption = "Recent Weigh-Ins"
+    end
+    
+    if @graphtype == "Weight"
+      @graphdataurl = url_for(:action=>"bodyGraphData", :graphtype => @graphtype)
+    else
+      @graphdataurl = url_for(:action=>"cardioGraphData", :graphtype => @graphtype)
     end
   end
   
