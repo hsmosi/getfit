@@ -13356,3 +13356,539 @@ Rendered cardio/_session (0.00374)
   [4;36;1mCardiotype Load (0.000227)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
 Rendered cardio/_session (0.00184)
 Completed in 0.01121 (89 reqs/sec) | Rendering: 0.00805 (71%) | DB: 0.00350 (31%) | 200 OK [http://test.host/cardio]
+  [4;36;1mUser Load (0.000325)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mBody Load (0.000218)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;36;1mBody Load (0.000196)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 2) [0m
+  [4;35;1mUser Load (0.000234)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;36;1mBody Load (0.000196)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 3) [0m
+  [4;35;1mUser Load (0.000343)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000322)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mBody Load (0.000224)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;36;1mBody Load (0.000192)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 2) [0m
+  [4;35;1mUser Load (0.000508)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;36;1mBody Load (0.000206)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 3) [0m
+  [4;35;1mUser Load (0.000241)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000286)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mBody Load (0.000192)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;36;1mBody Load (0.000195)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 2) [0m
+  [4;35;1mUser Load (0.000226)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;36;1mBody Load (0.000194)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 3) [0m
+  [4;35;1mUser Load (0.000229)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000252)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mBody Load (0.000190)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;36;1mBody Load (0.000188)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 2) [0m
+  [4;35;1mUser Load (0.000222)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;36;1mBody Load (0.000192)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 3) [0m
+  [4;35;1mUser Load (0.000236)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000257)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mBody Load (0.000197)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;36;1mBody Load (0.000198)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 2) [0m
+  [4;35;1mUser Load (0.000235)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;36;1mBody Load (0.000196)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 3) [0m
+  [4;35;1mUser Load (0.000228)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000225)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;35;1mUser Load (0.000272)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000228)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000230)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;36;1mCardiotype Load (0.000162)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;35;1mCardiotype Load (0.000163)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;36;1mUser Load (0.000250)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000227)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000226)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000165)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;36;1mCardiotype Load (0.000164)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;35;1mUser Load (0.000271)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000275)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000241)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000228)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000164)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;36;1mCardiotype Load (0.000164)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;35;1mUser Load (0.000241)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000261)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000232)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000235)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000168)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;36;1mCardiotype Load (0.000177)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;35;1mUser Load (0.000277)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000273)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000241)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000296)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000559)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;36;1mCardiotype Load (0.000189)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;35;1mUser Load (0.000313)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000264)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000260)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;36;1mCardiotype Load (0.000165)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;35;1mCardiotype Load (0.000193)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;36;1mUser Load (0.000261)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000234)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000230)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000168)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;36;1mCardiotype Load (0.000247)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;35;1mUser Load (0.046219)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000281)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000233)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;36;1mCardiotype Load (0.000169)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;35;1mCardiotype Load (0.000176)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;36;1mCardiotype Load (0.000171)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;35;1mCardiotype Load (0.000173)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;36;1mUser Load (0.000275)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000232)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000230)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000167)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;36;1mCardiotype Load (0.000166)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;35;1mUser Load (0.000431)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000276)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000238)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000239)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000169)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;36;1mCardiotype Load (0.000166)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;35;1mUser Load (0.000269)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000243)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000236)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;36;1mCardiotype Load (0.000168)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;35;1mCardiotype Load (0.000168)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;36;1mUser Load (0.000288)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000239)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000235)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000168)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;36;1mCardiotype Load (0.000168)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000217)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;36;1mCardiotype Load (0.000171)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000170)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+  [4;36;1mCardiotype Load (0.000202)[0m   [0;1mSELECT * FROM cardiotypes WHERE (description = 'Run') LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000174)[0m   [0mSELECT * FROM cardiotypes WHERE (description = 'Swim') LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000180)[0m   [0;1mSELECT * FROM cardiotypes WHERE (description = 'Cycle') LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000216)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+  [4;36;1mCardiotype Load (0.000170)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+  [4;35;1mCardiotype Load (0.000264)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 3) [0m
+  [4;36;1mCardiosession Load (0.000266)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions.cardiotype_id = 1) [0m
+  [4;35;1mCardiosession Load (0.000242)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions.cardiotype_id = 2) [0m
+  [4;36;1mCardiosession Load (0.000249)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions.cardiotype_id = 3) [0m
+  [4;35;1mUser Load (0.000278)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000241)[0m   [0;1mSELECT * FROM users WHERE (users."login" = 'quentin') LIMIT 1[0m
+  [4;35;1mSQL (0.000156)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mUser Load (0.000111)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.login) = 'quire') LIMIT 1[0m
+  [4;35;1mUser Load (0.000092)[0m   [0mSELECT * FROM users WHERE (LOWER(users.email) = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.000307)[0m   [0;1mINSERT INTO users ("salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "created_at", "email") VALUES('69b1ffa34686a8845b7c00395f8002c8e209c30b', '2008-01-14 20:13:45', '46f171e965abc2017b0b561e0f91e8e06c75b47d', NULL, NULL, 'quire', '2008-01-14 20:13:45', 'quire@example.com')[0m
+  [4;35;1mSQL (0.000134)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mUser Load (0.000752)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mUser Load (0.000177)[0m   [0mSELECT * FROM users WHERE (LOWER(users.login) = 'quentin2' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000164)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.email) = 'quentin@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.000361)[0m   [0mUPDATE users SET "created_at" = '2008-01-09 20:13:45', "email" = 'quentin@example.com', "remember_token" = NULL, "login" = 'quentin2', "remember_token_expires_at" = NULL, "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:45', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.000399)[0m   [0;1mSELECT * FROM users WHERE (users."login" = 'quentin2') LIMIT 1[0m
+  [4;35;1mSQL (0.000514)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mUser Load (0.000189)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.login) = 'quire') LIMIT 1[0m
+  [4;35;1mUser Load (0.000144)[0m   [0mSELECT * FROM users WHERE (users.email IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000210)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mSQL (0.000254)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mUser Load (0.000159)[0m   [0;1mSELECT * FROM users WHERE (users.login IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.000162)[0m   [0mSELECT * FROM users WHERE (LOWER(users.email) = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.000236)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mSQL (0.000271)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mUser Load (0.000174)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.login) = 'quire') LIMIT 1[0m
+  [4;35;1mUser Load (0.000154)[0m   [0mSELECT * FROM users WHERE (LOWER(users.email) = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.000183)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mSQL (0.000264)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+  [4;36;1mUser Load (0.000223)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.login) = 'quire') LIMIT 1[0m
+  [4;35;1mUser Load (0.000136)[0m   [0mSELECT * FROM users WHERE (LOWER(users.email) = 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mUser Load (0.000419)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Load (0.000141)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.login) = 'quentin' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000115)[0m   [0mSELECT * FROM users WHERE (LOWER(users.email) = 'quentin@example.com' AND users.id <> 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.000332)[0m   [0;1mUPDATE users SET "created_at" = '2008-01-09 20:13:45', "email" = 'quentin@example.com', "remember_token" = NULL, "login" = 'quentin', "remember_token_expires_at" = NULL, "crypted_password" = '4b6dd603c64f03bc2f676658e287094878df9603', "updated_at" = '2008-01-14 20:13:45', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.000254)[0m   [0mSELECT * FROM users WHERE (users."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mUser Load (0.000299)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mUser Update (0.000240)[0m   [0mUPDATE users SET "created_at" = '2008-01-09 20:13:45', "email" = 'quentin@example.com', "remember_token" = '9670421056120a4f7d0336fcfa5fce9a8fdcf6d2', "login" = 'quentin', "remember_token_expires_at" = '2008-01-28 20:13:45', "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:45', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.000677)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mUser Update (0.000373)[0m   [0mUPDATE users SET "created_at" = '2008-01-09 20:13:45', "email" = 'quentin@example.com', "remember_token" = '9670421056120a4f7d0336fcfa5fce9a8fdcf6d2', "login" = 'quentin', "remember_token_expires_at" = '2008-01-28 20:13:45', "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:45', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.000159)[0m   [0;1mUPDATE users SET "created_at" = '2008-01-09 20:13:45', "email" = 'quentin@example.com', "remember_token" = NULL, "login" = 'quentin', "remember_token_expires_at" = NULL, "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:45', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+  [4;35;1mUser Load (0.000461)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000374)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions.user_id = 1) [0m
+  [4;35;1mUser Load (0.000240)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;36;1mCardiosession Load (0.000243)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions.user_id = 2) [0m
+  [4;35;1mUser Load (0.000288)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000365)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions.user_id = 1) [0m
+  [4;35;1mUser Load (0.000232)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+  [4;36;1mCardiosession Load (0.000239)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions.user_id = 2) [0m
+  [4;36;1mSQL (0.000379)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+
+
+Processing AccountController#signup (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>"quire", "email"=>"quire@example.com"}, "action"=>"signup", "controller"=>"account"}
+  [4;35;1mUser Load (0.000332)[0m   [0mSELECT * FROM users WHERE (LOWER(users.login) = 'quire') LIMIT 1[0m
+  [4;36;1mUser Load (0.000150)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.email) = 'quire@example.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.000446)[0m   [0mINSERT INTO users ("salt", "updated_at", "crypted_password", "remember_token_expires_at", "remember_token", "login", "created_at", "email") VALUES('0a10f3a2b037df744712e8bbfbea7ce09fc0722b', '2008-01-14 20:13:47', '3f1b59c767384ad83549231be4c3cf96135f160e', NULL, NULL, 'quire', '2008-01-14 20:13:47', 'quire@example.com')[0m
+Redirected to http://test.host/account
+Completed in 0.04990 (20 reqs/sec) | DB: 0.00131 (2%) | 302 Found [http://test.host/account/signup?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.000209)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mUser Load (0.000732)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing AccountController#logout (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"logout", "controller"=>"account"}
+  [4;36;1mUser Load (0.000475)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.000503)[0m   [0mUPDATE users SET "created_at" = '2008-01-09 20:13:47', "email" = 'quentin@example.com', "remember_token" = NULL, "login" = 'quentin', "remember_token_expires_at" = NULL, "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:47', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/account/login
+Completed in 0.00651 (153 reqs/sec) | DB: 0.00192 (29%) | 302 Found [http://test.host/account/logout]
+  [4;36;1mUser Load (0.000433)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mUser Update (0.000410)[0m   [0mUPDATE users SET "created_at" = '2008-01-09 20:13:47', "email" = 'quentin@example.com', "remember_token" = 'd4bd8019c3678184521bd65f2d21be97831bcdcc', "login" = 'quentin', "remember_token_expires_at" = '2008-01-28 20:13:47', "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:47', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+
+
+Processing AccountController#index (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"account"}
+  [4;36;1mUser Load (0.000141)[0m   [0;1mSELECT * FROM users WHERE (users."remember_token" = 'invalid_auth_token') LIMIT 1[0m
+  [4;35;1mSQL (0.000146)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+Rendering account/index
+Completed in 0.00395 (253 reqs/sec) | Rendering: 0.00294 (74%) | DB: 0.00113 (28%) | 200 OK [http://test.host/account]
+  [4;36;1mUser Load (0.000428)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mUser Update (0.000325)[0m   [0mUPDATE users SET "created_at" = '2008-01-09 20:13:47', "email" = 'quentin@example.com', "remember_token" = 'd4bd8019c3678184521bd65f2d21be97831bcdcc', "login" = 'quentin', "remember_token_expires_at" = '2008-01-28 20:13:47', "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:47', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.000111)[0m   [0;1mUPDATE users SET "created_at" = '2008-01-09 20:13:47', "email" = 'quentin@example.com', "remember_token" = 'd4bd8019c3678184521bd65f2d21be97831bcdcc', "login" = 'quentin', "remember_token_expires_at" = '2008-01-14 20:08:47', "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:47', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+
+
+Processing AccountController#index (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"account"}
+  [4;35;1mUser Load (0.000314)[0m   [0mSELECT * FROM users WHERE (users."remember_token" = 'd4bd8019c3678184521bd65f2d21be97831bcdcc') LIMIT 1[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+Rendering account/index
+Completed in 0.00226 (443 reqs/sec) | Rendering: 0.00065 (28%) | DB: 0.00131 (58%) | 200 OK [http://test.host/account]
+
+
+Processing AccountController#login (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"action"=>"login", "controller"=>"account", "password"=>"bad password", "login"=>"quentin"}
+  [4;35;1mUser Load (0.000359)[0m   [0mSELECT * FROM users WHERE (users."login" = 'quentin') LIMIT 1[0m
+Rendering account/login
+Completed in 0.00355 (282 reqs/sec) | Rendering: 0.00258 (72%) | DB: 0.00036 (10%) | 200 OK [http://test.host/account/login?login=quentin&password=bad+password]
+
+
+Processing AccountController#login (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"action"=>"login", "controller"=>"account", "password"=>"test", "login"=>"quentin"}
+  [4;36;1mUser Load (0.000326)[0m   [0;1mSELECT * FROM users WHERE (users."login" = 'quentin') LIMIT 1[0m
+Redirected to http://test.host/account
+Completed in 0.00092 (1091 reqs/sec) | DB: 0.00033 (35%) | 302 Found [http://test.host/account/login?login=quentin&password=test]
+  [4;35;1mUser Load (0.000294)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mUser Update (0.000306)[0m   [0;1mUPDATE users SET "created_at" = '2008-01-09 20:13:47', "email" = 'quentin@example.com', "remember_token" = 'd4bd8019c3678184521bd65f2d21be97831bcdcc', "login" = 'quentin', "remember_token_expires_at" = '2008-01-28 20:13:47', "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:47', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+
+
+Processing AccountController#index (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"account"}
+  [4;35;1mUser Load (0.000324)[0m   [0mSELECT * FROM users WHERE (users."remember_token" = 'd4bd8019c3678184521bd65f2d21be97831bcdcc') LIMIT 1[0m
+  [4;36;1mUser Update (0.000125)[0m   [0;1mUPDATE users SET "created_at" = '2008-01-09 20:13:47', "email" = 'quentin@example.com', "remember_token" = 'd4bd8019c3678184521bd65f2d21be97831bcdcc', "login" = 'quentin', "remember_token_expires_at" = '2008-01-28 20:13:47', "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:47', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+Cookie set: auth_token=d4bd8019c3678184521bd65f2d21be97831bcdcc; path=/; expires=Mon, 28 Jan 2008 20:13:47 GMT
+Rendering account/index
+Completed in 0.00292 (341 reqs/sec) | Rendering: 0.00069 (23%) | DB: 0.00105 (35%) | 200 OK [http://test.host/account]
+  [4;35;1mUser Load (0.000744)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing AccountController#logout (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"logout", "controller"=>"account"}
+  [4;36;1mUser Load (0.000420)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.000435)[0m   [0mUPDATE users SET "created_at" = '2008-01-09 20:13:47', "email" = 'quentin@example.com', "remember_token" = NULL, "login" = 'quentin', "remember_token_expires_at" = NULL, "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:47', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/account/login
+Completed in 0.00477 (209 reqs/sec) | DB: 0.00160 (33%) | 302 Found [http://test.host/account/logout]
+
+
+Processing AccountController#login (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"action"=>"login", "controller"=>"account", "password"=>"test", "login"=>"quentin", "remember_me"=>"0"}
+  [4;36;1mUser Load (0.000622)[0m   [0;1mSELECT * FROM users WHERE (users."login" = 'quentin') LIMIT 1[0m
+Redirected to http://test.host/account
+Completed in 0.00421 (237 reqs/sec) | DB: 0.00062 (14%) | 302 Found [http://test.host/account/login?login=quentin&password=test&remember_me=0]
+
+
+Processing AccountController#login (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"action"=>"login", "controller"=>"account", "password"=>"test", "login"=>"quentin", "remember_me"=>"1"}
+  [4;35;1mUser Load (0.000627)[0m   [0mSELECT * FROM users WHERE (users."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mUser Update (0.000400)[0m   [0;1mUPDATE users SET "created_at" = '2008-01-09 20:13:47', "email" = 'quentin@example.com', "remember_token" = 'd4bd8019c3678184521bd65f2d21be97831bcdcc', "login" = 'quentin', "remember_token_expires_at" = '2008-01-28 20:13:47', "crypted_password" = '00742970dc9e6319f8019fd54864d3ea740f04b1', "updated_at" = '2008-01-14 20:13:47', "salt" = '7e3041ebc2fc05a40c60028e2c4901a81035d3cd' WHERE "id" = 1[0m
+Cookie set: auth_token=d4bd8019c3678184521bd65f2d21be97831bcdcc; path=/; expires=Mon, 28 Jan 2008 20:13:47 GMT
+Redirected to http://test.host/account
+Completed in 0.00383 (261 reqs/sec) | DB: 0.00103 (26%) | 302 Found [http://test.host/account/login?login=quentin&password=test&remember_me=1]
+  [4;35;1mSQL (0.000233)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+
+
+Processing AccountController#signup (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>"quire", "email"=>nil}, "action"=>"signup", "controller"=>"account"}
+  [4;36;1mUser Load (0.000164)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.login) = 'quire') LIMIT 1[0m
+  [4;35;1mUser Load (0.000092)[0m   [0mSELECT * FROM users WHERE (users.email IS NULL) LIMIT 1[0m
+Rendering account/signup
+Completed in 0.00465 (214 reqs/sec) | Rendering: 0.00325 (69%) | DB: 0.00049 (10%) | 200 OK [http://test.host/account/signup?user%5Bemail%5D=&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.000208)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mSQL (0.000297)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+
+
+Processing AccountController#signup (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>"quire", "login"=>nil, "email"=>"quire@example.com"}, "action"=>"signup", "controller"=>"account"}
+  [4;36;1mUser Load (0.000116)[0m   [0;1mSELECT * FROM users WHERE (users.login IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.000114)[0m   [0mSELECT * FROM users WHERE (LOWER(users.email) = 'quire@example.com') LIMIT 1[0m
+Rendering account/signup
+Completed in 0.00292 (341 reqs/sec) | Rendering: 0.00141 (48%) | DB: 0.00074 (25%) | 200 OK [http://test.host/account/signup?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.000175)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mSQL (0.000171)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+
+
+Processing AccountController#signup (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"password_confirmation"=>nil, "password"=>"quire", "login"=>"quire", "email"=>"quire@example.com"}, "action"=>"signup", "controller"=>"account"}
+  [4;36;1mUser Load (0.000119)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.login) = 'quire') LIMIT 1[0m
+  [4;35;1mUser Load (0.000095)[0m   [0mSELECT * FROM users WHERE (LOWER(users.email) = 'quire@example.com') LIMIT 1[0m
+Rendering account/signup
+Completed in 0.00245 (408 reqs/sec) | Rendering: 0.00118 (48%) | DB: 0.00056 (22%) | 200 OK [http://test.host/account/signup?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire&user%5Bpassword_confirmation%5D=]
+  [4;36;1mSQL (0.000145)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mSQL (0.000162)[0m   [0mSELECT count(*) AS count_all FROM users [0m
+
+
+Processing AccountController#signup (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"password_confirmation"=>"quire", "password"=>nil, "login"=>"quire", "email"=>"quire@example.com"}, "action"=>"signup", "controller"=>"account"}
+  [4;36;1mUser Load (0.000115)[0m   [0;1mSELECT * FROM users WHERE (LOWER(users.login) = 'quire') LIMIT 1[0m
+  [4;35;1mUser Load (0.000094)[0m   [0mSELECT * FROM users WHERE (LOWER(users.email) = 'quire@example.com') LIMIT 1[0m
+Rendering account/signup
+Completed in 0.00244 (410 reqs/sec) | Rendering: 0.00120 (49%) | DB: 0.00052 (21%) | 200 OK [http://test.host/account/signup?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=&user%5Bpassword_confirmation%5D=quire]
+  [4;36;1mSQL (0.000143)[0m   [0;1mSELECT count(*) AS count_all FROM users [0m
+  [4;35;1mBody Load (0.000524)[0m   [0mSELECT * FROM bodies [0m
+  [4;36;1mBody Load (0.000254)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 3) [0m
+  [4;35;1mUser Load (0.000239)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing BodyController#delete (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"delete", "controller"=>"body", "bodyid"=>"3"}
+  [4;36;1mUser Load (0.000258)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mBody Load (0.000216)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 3) [0m
+  [4;36;1mUser Load (0.000237)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 2) [0m
+Redirected to http://test.host/body/unauthorised
+Completed in 0.00360 (278 reqs/sec) | DB: 0.00187 (52%) | 302 Found [http://test.host/body/delete?bodyid=3]
+  [4;35;1mBody Load (0.000358)[0m   [0mSELECT * FROM bodies [0m
+  [4;36;1mBody Load (0.000391)[0m   [0;1mSELECT * FROM bodies [0m
+  [4;35;1mBody Load (0.000191)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;36;1mUser Load (0.000224)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing BodyController#delete (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"delete", "controller"=>"body", "bodyid"=>"1"}
+  [4;35;1mUser Load (0.000239)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mBody Load (0.000192)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;35;1mUser Load (0.000225)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mBody Delete all (0.000586)[0m   [0;1mDELETE FROM bodies WHERE ("id" IN (1)) [0m
+Redirected to http://test.host/body
+Completed in 0.00249 (401 reqs/sec) | DB: 0.00241 (96%) | 302 Found [http://test.host/body/delete?bodyid=1]
+  [4;35;1mBody Load (0.000326)[0m   [0mSELECT * FROM bodies [0m
+  [4;36;1mUser Load (0.000410)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing BodyController#edit (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"body", "sessionid"=>"999"}
+  [4;35;1mUser Load (0.000288)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+Redirected to http://test.host/body/unauthorised
+Completed in 0.00116 (858 reqs/sec) | DB: 0.00102 (87%) | 302 Found [http://test.host/body/edit?sessionid=999]
+  [4;36;1mBody Load (0.000316)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;35;1mUser Load (0.000310)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+
+
+Processing BodyController#edit (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"body", "sessionid"=>"1"}
+  [4;36;1mUser Load (0.000359)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 2) LIMIT 1[0m
+Redirected to http://test.host/body/unauthorised
+Completed in 0.00103 (970 reqs/sec) | DB: 0.00098 (95%) | 302 Found [http://test.host/body/edit?sessionid=1]
+  [4;35;1mBody Load (0.000312)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;36;1mUser Load (0.000277)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing BodyController#edit (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"body", "bodyid"=>"1"}
+  [4;35;1mUser Load (0.000305)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mBody Load (0.000273)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;35;1mUser Load (0.000365)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/site
+Rendering body/edit
+Rendered body/_bodyErrors (0.00093)
+Rendered body/_bodyForm (0.00605)
+Completed in 0.02502 (39 reqs/sec) | Rendering: 0.02248 (89%) | DB: 0.00153 (6%) | 200 OK [http://test.host/body/edit?bodyid=1]
+  [4;36;1mBody Load (0.000594)[0m   [0;1mSELECT * FROM bodies [0m
+  [4;35;1mBody Load (0.000263)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;36;1mUser Load (0.000301)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing BodyController#edit (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"action"=>"edit", "currentbody"=>{"weight"=>"z", "id"=>1}, "controller"=>"body"}
+  [4;35;1mUser Load (0.000318)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mBody Load (0.000259)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000312)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/site
+Rendering body/edit
+Rendered body/_bodyErrors (0.00007)
+Rendered body/_bodyForm (0.00117)
+Completed in 0.00533 (187 reqs/sec) | Rendering: 0.00224 (42%) | DB: 0.00205 (38%) | 200 OK [http://test.host/body/edit?currentbody%5Bid%5D=1&currentbody%5Bweight%5D=z]
+  [4;36;1mBody Load (0.000235)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;35;1mCardiosession Load (0.000441)[0m   [0mSELECT * FROM cardiosessions [0m
+  [4;36;1mBody Load (0.000391)[0m   [0;1mSELECT * FROM bodies [0m
+  [4;35;1mBody Load (0.000196)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;36;1mUser Load (0.000235)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing BodyController#edit (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"action"=>"edit", "currentbody"=>{"weight"=>999, "id"=>1}, "controller"=>"body"}
+  [4;35;1mUser Load (0.000258)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mBody Load (0.000194)[0m   [0;1mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000230)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;36;1mBody Update (0.000467)[0m   [0;1mUPDATE bodies SET "created_at" = '2008-01-14 20:13:47', "weight" = 999, "measurementdate" = '2008-01-14', "updated_at" = '2008-01-14 20:13:47', "user_id" = 1 WHERE "id" = 1[0m
+Redirected to http://test.host/body
+Completed in 0.00373 (267 reqs/sec) | DB: 0.00265 (70%) | 302 Found [http://test.host/body/edit?currentbody%5Bid%5D=1&currentbody%5Bweight%5D=999]
+  [4;35;1mBody Load (0.000313)[0m   [0mSELECT * FROM bodies WHERE (bodies."id" = 1) [0m
+  [4;36;1mCardiosession Load (0.000571)[0m   [0;1mSELECT * FROM cardiosessions [0m
+  [4;35;1mUser Load (0.000549)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing BodyController#index (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"body"}
+  [4;36;1mUser Load (0.000360)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mBody Load (0.000885)[0m   [0mSELECT * FROM bodies WHERE (user_id = 1) ORDER BY measurementdate desc[0m
+Rendering template within layouts/site
+Rendering body/index
+Rendered body/_body (0.00243)
+Rendered body/_body (0.00096)
+Completed in 0.00892 (112 reqs/sec) | Rendering: 0.00679 (76%) | DB: 0.00268 (30%) | 200 OK [http://test.host/body]
+  [4;36;1mCardiosession Load (0.000559)[0m   [0;1mSELECT * FROM cardiosessions [0m
+  [4;35;1mCardiosession Load (0.000273)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 3) [0m
+  [4;36;1mUser Load (0.000261)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing CardioController#delete (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"delete", "controller"=>"cardio", "sessionid"=>"3"}
+  [4;35;1mUser Load (0.000282)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiosession Load (0.000291)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 3) [0m
+  [4;35;1mUser Load (0.000253)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) [0m
+Redirected to http://test.host/cardio/unauthorised
+Completed in 0.00394 (253 reqs/sec) | DB: 0.00192 (48%) | 302 Found [http://test.host/cardio/delete?sessionid=3]
+  [4;36;1mCardiosession Load (0.000474)[0m   [0;1mSELECT * FROM cardiosessions [0m
+  [4;35;1mCardiosession Load (0.000516)[0m   [0mSELECT * FROM cardiosessions [0m
+  [4;36;1mCardiosession Load (0.000244)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;35;1mUser Load (0.000230)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing CardioController#delete (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"delete", "controller"=>"cardio", "sessionid"=>"1"}
+  [4;36;1mUser Load (0.000249)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiosession Load (0.000232)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mUser Load (0.000228)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCardiosession Delete all (0.000555)[0m   [0mDELETE FROM cardiosessions WHERE ("id" IN (1)) [0m
+Redirected to http://test.host/cardio
+Completed in 0.00245 (407 reqs/sec) | DB: 0.00273 (111%) | 302 Found [http://test.host/cardio/delete?sessionid=1]
+  [4;36;1mCardiosession Load (0.000368)[0m   [0;1mSELECT * FROM cardiosessions [0m
+  [4;35;1mUser Load (0.000653)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing CardioController#edit (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"999"}
+  [4;36;1mUser Load (0.000437)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000528)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000185)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 999) [0m
+Redirected to http://test.host/cardio/unauthorised
+Completed in 0.00312 (320 reqs/sec) | DB: 0.00217 (69%) | 302 Found [http://test.host/cardio/edit?sessionid=999]
+  [4;35;1mCardiosession Load (0.000799)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mUser Load (0.000427)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 2) [0m
+
+
+Processing CardioController#edit (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"1"}
+  [4;35;1mUser Load (0.000338)[0m   [0mSELECT * FROM users WHERE (users."id" = 2) LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000304)[0m   [0;1mSELECT * FROM cardiotypes [0m
+  [4;35;1mCardiosession Load (0.000260)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mUser Load (0.000233)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Redirected to http://test.host/cardio/unauthorised
+Completed in 0.00271 (369 reqs/sec) | DB: 0.00236 (87%) | 302 Found [http://test.host/cardio/edit?sessionid=1]
+  [4;35;1mCardiosession Load (0.000288)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mUser Load (0.000239)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing CardioController#edit (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "sessionid"=>"1"}
+  [4;35;1mUser Load (0.000334)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000377)[0m   [0;1mSELECT * FROM cardiotypes [0m
+  [4;35;1mCardiosession Load (0.000276)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mUser Load (0.000270)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/site
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00073)
+Rendered cardio/_sessionForm (0.00547)
+Completed in 0.00993 (100 reqs/sec) | Rendering: 0.00721 (72%) | DB: 0.00178 (17%) | 200 OK [http://test.host/cardio/edit?sessionid=1]
+  [4;35;1mCardiosession Load (0.000518)[0m   [0mSELECT * FROM cardiosessions [0m
+  [4;36;1mCardiosession Load (0.000241)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;35;1mUser Load (0.000302)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing CardioController#edit (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "currentsession"=>{"id"=>1, "distance"=>"z"}}
+  [4;36;1mUser Load (0.000325)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;35;1mCardiotype Load (0.000387)[0m   [0mSELECT * FROM cardiotypes [0m
+  [4;36;1mCardiosession Load (0.000250)[0m   [0;1mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mUser Load (0.000263)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) [0m
+Rendering template within layouts/site
+Rendering cardio/edit
+Rendered cardio/_sessionErrors (0.00017)
+Rendered cardio/_sessionForm (0.00179)
+Completed in 0.00702 (142 reqs/sec) | Rendering: 0.00306 (43%) | DB: 0.00229 (32%) | 200 OK [http://test.host/cardio/edit?currentsession%5Bdistance%5D=z&currentsession%5Bid%5D=1]
+  [4;36;1mCardiosession Load (0.000379)[0m   [0;1mSELECT * FROM cardiosessions WHERE (id = 1) LIMIT 1[0m
+  [4;35;1mCardiosession Load (0.000575)[0m   [0mSELECT * FROM cardiosessions [0m
+  [4;36;1mCardiosession Load (0.000602)[0m   [0;1mSELECT * FROM cardiosessions [0m
+  [4;35;1mCardiosession Load (0.000407)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+  [4;36;1mUser Load (0.000271)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing CardioController#edit (for 0.0.0.0 at 2008-01-14 20:13:47) [POST]
+  Session ID: 
+  Parameters: {"action"=>"edit", "controller"=>"cardio", "currentsession"=>{"id"=>1, "distance"=>999}}
+  [4;35;1mUser Load (0.000638)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiotype Load (0.000311)[0m   [0;1mSELECT * FROM cardiotypes [0m
+  [4;35;1mCardiosession Load (0.000247)[0m   [0mSELECT * FROM cardiosessions WHERE (cardiosessions."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mUser Load (0.000288)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+  [4;35;1mCardiosession Update (0.000584)[0m   [0mUPDATE cardiosessions SET "distance" = 999, "created_at" = '2008-01-14 20:13:47', "timetaken" = '2008-01-14 00:10:00', "comments" = 'Some comment', "workoutdate" = '2008-01-14', "cardiotype_id" = 1, "updated_at" = '2008-01-14 20:13:47', "user_id" = 1 WHERE "id" = 1[0m
+Redirected to http://test.host/cardio
+Completed in 0.00606 (165 reqs/sec) | DB: 0.00430 (71%) | 302 Found [http://test.host/cardio/edit?currentsession%5Bdistance%5D=999&currentsession%5Bid%5D=1]
+  [4;36;1mCardiosession Load (0.000392)[0m   [0;1mSELECT * FROM cardiosessions WHERE (id = 1) LIMIT 1[0m
+  [4;35;1mCardiosession Load (0.000452)[0m   [0mSELECT * FROM cardiosessions [0m
+  [4;36;1mUser Load (0.000339)[0m   [0;1mSELECT * FROM users WHERE (users."id" = 1) [0m
+
+
+Processing CardioController#index (for 0.0.0.0 at 2008-01-14 20:13:47) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"cardio"}
+  [4;35;1mUser Load (0.000274)[0m   [0mSELECT * FROM users WHERE (users."id" = 1) LIMIT 1[0m
+  [4;36;1mCardiosession Load (0.000762)[0m   [0;1mSELECT * FROM cardiosessions WHERE (user_id = 1) ORDER BY workoutdate desc[0m
+Rendering template within layouts/site
+Rendering cardio/index
+  [4;35;1mCardiotype Load (0.000369)[0m   [0mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 1) [0m
+Rendered cardio/_session (0.00271)
+  [4;36;1mCardiotype Load (0.000189)[0m   [0;1mSELECT * FROM cardiotypes WHERE (cardiotypes."id" = 2) [0m
+Rendered cardio/_session (0.00142)
+Completed in 0.00843 (118 reqs/sec) | Rendering: 0.00612 (72%) | DB: 0.00278 (32%) | 200 OK [http://test.host/cardio]

@@ -3,12 +3,14 @@ class CardioController < ApplicationController
   layout "site"
   
   def index
+    session[:head] = "cardio"
     @currentsession = nil
     @sessions = Cardiosession.sessions_for_user(self.current_user)
   end
   
   def edit
     @cardiotypes = Cardiotype.find(:all)
+    @back = self.source_url
     if params[:currentsession].nil?
       begin
         @currentsession = Cardiosession.find(params[:sessionid])
@@ -23,12 +25,13 @@ class CardioController < ApplicationController
       end
     else
       @currentsession = Cardiosession.update(params[:currentsession][:id], params[:currentsession])
-      redirect_to :action => "index" if (@currentsession.valid?)
+      redirect_to @back if (@currentsession.valid?)
     end
   end
   
   def new
     @cardiotypes = Cardiotype.find(:all)
+    @back = self.source_url
     if params[:currentsession].nil?
       @currentsession = Cardiosession.new
       @currentsession.workoutdate = Date.today
@@ -37,7 +40,7 @@ class CardioController < ApplicationController
       @currentsession.user = self.current_user
       if @currentsession.valid?
         @currentsession.save
-        redirect_to :action => "index"
+        redirect_to @back
       end
     end
   end
@@ -56,6 +59,6 @@ class CardioController < ApplicationController
     end
     
     Cardiosession.delete(session.id)
-    redirect_to :action => "index"
+    redirect_to self.source_url
   end
 end
