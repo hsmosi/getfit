@@ -40,6 +40,10 @@ class Cardiosession < ActiveRecord::Base
     (self.timetaken.hour * 60 + self.timetaken.min) * 60 + self.timetaken.sec
   end
   
+  def laptime_in_seconds
+    self.time_in_seconds / distance
+  end
+  
   def self.sessions_for_user(user)
     self.find(:all, :conditions => "user_id = #{user.id}", :order => "workoutdate desc")
   end
@@ -51,5 +55,9 @@ class Cardiosession < ActiveRecord::Base
   def self.last_month(user)
     self.find(:all, :conditions => "user_id = #{user.id}", :order => "workoutdate")
     # unfinished
+  end
+  
+  def self.last_month(user, cardiotype)
+    self.find(:all, :conditions => "user_id = #{user.id} AND cardiotype_id = #{cardiotype.id}", :order => "workoutdate")
   end
 end
