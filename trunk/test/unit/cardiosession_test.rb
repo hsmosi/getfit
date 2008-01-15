@@ -77,4 +77,35 @@ class CardiosessionTest < ActiveSupport::TestCase
     assert_equal(@run_session.timetaken.min, 13)
     assert_equal(@run_session.timetaken.sec, 14)
   end
+  
+  def test_topfive_gets_five
+    results = Cardiosession.top_five(@quentin)
+    assert_not_nil(results)
+    assert_equal(5, results.length)
+  end
+  
+  def test_topfive_excludes_oldest
+    results = Cardiosession.top_five(@quentin)
+    assert_not_nil(results)
+    assert_equal(0, results.select { |r| r.id == 6 }.length)
+  end
+  
+  def test_topfive_order
+    results = Cardiosession.top_five(@quentin)
+    assert_not_nil(results)
+    assert_equal(1, results[0].id)
+    assert_equal(5, results[4].id)
+  end
+  
+  def test_lastmonth_type_all_count
+    results = Cardiosession.last_month(@quentin)
+    assert_not_nil(results)
+    assert_equal(4, results.length)
+  end
+  
+  def test_lastmonth_type_is_swim_count
+    results = Cardiosession.last_month(@quentin, @swim)
+    assert_not_nil(results)
+    assert_equal(3, results.length)
+  end
 end

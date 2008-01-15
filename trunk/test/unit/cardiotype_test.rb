@@ -17,9 +17,19 @@ class CardiotypeTest < ActiveSupport::TestCase
   end
   
   def test_relationship_to_cardiosession
-    assert_equal(@run.cardiosessions.length, 1)
-    assert_equal(@swim.cardiosessions.length, 1)
-    assert_equal(@cycle.cardiosessions.length, 1)
+    assert_equal(1,@run.cardiosessions.length)
+    assert_equal(5,@swim.cardiosessions.length)
+    assert_equal(1,@cycle.cardiosessions.length)
+  end
+  
+  def test_find_by_description_succeed
+    run = Cardiotype.find_by_description("Run")
+    assert_equal(run, @run)
+  end
+  
+  def test_find_by_description_fail
+    z = Cardiotype.find_by_description("Runz")
+    assert_nil(z)
   end
 end
 
