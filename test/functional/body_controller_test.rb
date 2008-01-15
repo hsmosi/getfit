@@ -14,7 +14,32 @@ class BodyControllerTest < ActionController::TestCase
     get :index
     assert_response(:success)
     assert_not_nil(assigns["bodies"])
-    assert_equal(assigns["bodies"].length, 2)
+    assert_equal(6, assigns["bodies"].length)
+  end
+  
+  def test_new_load
+    login_as(:quentin)
+    get :new
+    assert_response(:success)
+    assert_not_nil(assigns["currentbody"])
+    assert_nil(assigns["currentbody"].id)
+  end
+  
+  def test_new_save_success
+    original_row_count = Body.find(:all).length
+    login_as(:quentin)
+    post :new, :currentbody => { :measurementdate => Date.today, :weight => 75 }
+    assert_response(:redirect)
+    assert_equal(original_row_count + 1, Body.find(:all).length)
+  end
+  
+  def test_new_save_failed
+    original_row_count = Body.find(:all).length
+    login_as(:quentin)
+    post :new, :currentbody => { :measurementdate => Date.today }
+    assert_response(:success)
+    assert(assigns["currentbody"].errors.length > 0)
+    assert_equal(original_row_count , Body.find(:all).length)
   end
   
   def test_edit_load_succeed
@@ -29,7 +54,7 @@ class BodyControllerTest < ActionController::TestCase
   
   def test_edit_load_failed_missing_body
     login_as(:quentin)
-    get :edit, :sessionid => 999
+    get :edit, :bodyid => 999
     assert_nil(assigns["currentbody"])
     assert_response(:redirect)
   end
@@ -38,7 +63,7 @@ class BodyControllerTest < ActionController::TestCase
     body = bodies(:quentinbodyone)
     
     login_as(:aaron)
-    get :edit, :sessionid => body.id
+    get :edit, :bodyid => body.id
     assert_nil(assigns["currentbody"])
     assert_response(:redirect)
   end
@@ -54,7 +79,7 @@ class BodyControllerTest < ActionController::TestCase
     
     saved_session = Body.find(body.id)
     assert_equal(saved_session.weight, 999)
-    assert_equal(original_row_count, Cardiosession.find(:all).length) # edit operation so we shouldn't be adding any rows
+    assert_equal(original_row_count, Body.find(:all).length) # edit operation so we shouldn't be adding any rows
   end
   
   def test_edit_save_failed
@@ -68,7 +93,7 @@ class BodyControllerTest < ActionController::TestCase
     
     saved_session = Body.find(body.id)
     assert_equal(saved_session.weight, body.weight)
-    assert_equal(original_row_count, Cardiosession.find(:all).length)
+    assert_equal(original_row_count, Body.find(:all).length)
   end
   
   def test_delete_succeed
@@ -92,7 +117,7 @@ class BodyControllerTest < ActionController::TestCase
     assert_equal(original_row_count, Body.find(:all).length)
   end
   
-  def test_delete_failed_missing_body
+  def test_delete_failed_unauthorised_body
     original_row_count = Body.find(:all).length
     body = bodies(:aaronbodyone)
     login_as(:quentin)

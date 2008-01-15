@@ -14,7 +14,31 @@ class CardioControllerTest < ActionController::TestCase
     get :index
     assert_response(:success)
     assert_not_nil(assigns["sessions"])
-    assert_equal(assigns["sessions"].length, 2)
+    assert_equal(6, assigns["sessions"].length)
+  end
+  
+  def test_new_load
+    login_as(:quentin)
+    get :new
+    assert_response(:success)
+    assert_not_nil(assigns["currentsession"])
+    assert_nil(assigns["currentsession"].id)
+  end
+  
+  def test_new_save_succeed
+    original_row_count = Cardiosession.find(:all).length
+    login_as(:quentin)
+    post :new, :currentsession => { :workoutdate => Time.now, :distance => 2, :timetakenastext => "10:10" }
+    assert_response(:redirect)
+    assert_equal(original_row_count + 1, Cardiosession.find(:all).length)
+  end
+  
+  def test_new_save_failed
+    original_row_count = Cardiosession.find(:all).length
+    login_as(:quentin)
+    post :new, :currentsession => { :workoutdate => Time.now, :distance => "bad distance", :timetakenastext => "10:10" }
+    assert_response(:success)
+    assert_equal(original_row_count, Cardiosession.find(:all).length)
   end
   
   def test_edit_load_succeed
@@ -24,7 +48,7 @@ class CardioControllerTest < ActionController::TestCase
     get :edit, :sessionid => run_session.id
     assert_response(:success)
     assert_not_nil(assigns["currentsession"])
-    assert_equal(assigns["currentsession"].id, run_session.id)
+    assert_equal(run_session.id, assigns["currentsession"].id)
   end
   
   def test_edit_load_failed_missing_session

@@ -4,7 +4,7 @@ class BodyController < ApplicationController
 
   def index
     session[:head] = "body"
-    @bodies = Body.bodies_for_user(self.current_user)
+    @bodies = Body.for_user(self.current_user)
   end
   
   def edit

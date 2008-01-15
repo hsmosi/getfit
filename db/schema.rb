@@ -13,7 +13,7 @@ ActiveRecord::Schema.define(:version => 5) do
 
   create_table "bodies", :force => true do |t|
     t.integer  "weight",          :null => false
-    t.date     "measurementdate", :null => false
+    t.datetime "measurementdate", :null => false
     t.integer  "user_id",         :null => false
     t.datetime "created_at"
     t.datetime "updated_at"

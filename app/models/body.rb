@@ -6,7 +6,7 @@ class Body < ActiveRecord::Base
   validates_presence_of :weight, :message => "Weight must be given"
   validates_presence_of :measurementdate, :message => "A date must be given"
   
-  def self.bodies_for_user(user)
+  def self.for_user(user)
     self.find(:all, :conditions => "user_id = #{user.id}", :order => "measurementdate desc")
   end
   
@@ -15,7 +15,7 @@ class Body < ActiveRecord::Base
   end
   
   def self.last_month(user)
-    self.find(:all, :conditions => "user_id = #{user.id}", :order => "measurementdate")
-    # unfinished
+    startdate = Time.now - dhms2sec(28)
+    self.find(:all, :conditions => "user_id = #{user.id} AND measurementdate > '#{startdate.to_formatted_s(:db)}'", :order => "measurementdate desc")
   end
 end

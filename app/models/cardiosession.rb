@@ -61,12 +61,12 @@ class Cardiosession < ActiveRecord::Base
     self.find(:all, :conditions => "user_id = #{user.id}", :order => "workoutdate desc", :limit => 5)
   end
   
-  def self.last_month(user)
-    self.find(:all, :conditions => "user_id = #{user.id}", :order => "workoutdate")
-    # unfinished
-  end
-  
-  def self.last_month(user, cardiotype)
-    self.find(:all, :conditions => "user_id = #{user.id} AND cardiotype_id = #{cardiotype.id}", :order => "workoutdate")
+  def self.last_month(user, cardiotype = nil)
+    startdate = Time.now - dhms2sec(28)
+    if cardiotype.nil?
+      self.find(:all, :conditions => "user_id = #{user.id} AND workoutdate > '#{startdate.to_formatted_s(:db)}'", :order => "workoutdate")
+    else
+      self.find(:all, :conditions => "user_id = #{user.id} AND cardiotype_id = #{cardiotype.id} AND workoutdate > '#{startdate.to_formatted_s(:db)}'", :order => "workoutdate")
+    end
   end
 end
