@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 8) do
   create_table "goaltypes", :force => true do |t|
     t.string   "genericdescription",  :null => false
     t.string   "templatedescription", :null => false
+    t.string   "focus",               :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

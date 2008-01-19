@@ -33,6 +33,9 @@ div.tabbar
 
 div.currenttab
 {
+	/*background-image: url('/images/tab.png');
+	background-repeat: no-repeat;
+	background-position: 0.5em 0em;*/
 	float: left;
 	background-color: #DFDFDF;
 	line-height: 1.6em;
