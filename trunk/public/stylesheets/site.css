@@ -77,6 +77,36 @@ div.page
 	background-color: white;
 }
 
+div.goalsHalf
+{
+	background-color: #FFE9E9;
+	padding: 0.5em;
+	margin-bottom: 1em;
+	margin-right: 425px;
+}
+
+div.goals
+{
+	background-color: #FFE9E9;
+	padding: 0.5em;
+	margin-bottom: 1em;
+}
+
+div.summary
+{
+	background-color: #EDF0FA;
+	padding: 0.5em;
+	margin-bottom: 1em;
+}
+
+div.summaryHalf
+{
+	background-color: #EDF0FA;
+	padding: 0.5em;
+	margin-bottom: 1em;
+	margin-right: 425px;
+}
+
 div.left
 {
 	background-color: #FFFBDB;
