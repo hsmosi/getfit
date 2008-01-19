@@ -13,47 +13,56 @@
 	<%= link_to "Weight", { :action => "index", :graphtype => "Weight" }%>
 </div>
 <div>
-	<h1>Recent Activity</h1>
-	<% if @cardioSessions.length == 0 %>
-	None yet. Don't you think you should get out there?
-	<% else %>
-	<table>
-		<tr>
-			<th>Date</th>
-			<th>Type</th>
-			<th>Distance</th>
-			<th>Total Time</th>
-			<th>Lap Time</th>
-		</tr>
-		<% @cardioSessions.each do |s| %>
+	<div class="summaryHalf">
+		<h1>Recent Activity</h1>
+		<% if @cardioSessions.length == 0 %>
+		None yet. Don't you think you should get out there?
+		<% else %>
+		<table>
 			<tr>
-				<td><%= link_to s.workoutdate.strftime("%A %d %B"), { :action => "edit", :controller => "cardio", :sessionid => s.id } %></td>
-				<td><%= s.cardiotype.description %></td>
-				<td align="right"><%= s.distance %></td>
-				<td align="right"><%= s.timetakenastext %></td>
-				<td align="right"><%= s.formatted_laptime %></td>
+				<th>Date</th>
+				<th>Type</th>
+				<th>Distance</th>
+				<th>Total Time</th>
+				<th>Lap Time</th>
 			</tr>
-		<% end %>
-	</table>
-	<% end -%>
-	<p><%= link_to "Add Session", { :action => "new", :controller => "cardio"}, :class => "action" %></p>
-	<h1 style="margin-top: 1em">Recent Weigh-ins</h1>
-	<% if @bodyStats.length == 0 %>
-	No weigh-ins recorded yet. Go on... it doesn't hurt.
-	<% else %>
-	<table>
-		<tr>
-			<th>Date</th>
-			<th>Weight</th>
-		</tr>
-		<% @bodyStats.each do |b| %>
+			<% @cardioSessions.each do |s| %>
+				<tr>
+					<td><%= link_to s.workoutdate.strftime("%A %d %B"), { :action => "edit", :controller => "cardio", :sessionid => s.id } %></td>
+					<td><%= s.cardiotype.description %></td>
+					<td align="right"><%= s.distance %></td>
+					<td align="right"><%= s.timetakenastext %></td>
+					<td align="right"><%= s.formatted_laptime %></td>
+				</tr>
+			<% end %>
+		</table>
+		<% end -%>
+		<p><%= link_to "Add Session", { :action => "new", :controller => "cardio"}, :class => "action" %></p>
+		<h1 style="margin-top: 1em">Recent Weigh-ins</h1>
+		<% if @bodyStats.length == 0 %>
+		No weigh-ins recorded yet. Go on... it doesn't hurt.
+		<% else %>
+		<table>
 			<tr>
-				<td><%= link_to b.measurementdate.strftime("%A %d %B"), { :action => "edit", :controller => "body", :bodyid => b.id }%></td>
-				<td><%= b.weight%></td>
+				<th>Date</th>
+				<th>Weight</th>
 			</tr>
-		<% end %>
-	</table>
-	<% end -%>
-	<p><%= link_to "Add Weigh-in", { :action => "new", :controller => "body"}, :class => "action" %></p>
+			<% @bodyStats.each do |b| %>
+				<tr>
+					<td><%= link_to b.measurementdate.strftime("%A %d %B"), { :action => "edit", :controller => "body", :bodyid => b.id }%></td>
+					<td><%= b.weight%></td>
+				</tr>
+			<% end %>
+		</table>
+		<% end -%>
+		<p><%= link_to "Add Weigh-in", { :action => "new", :controller => "body"}, :class => "action" %></p>
+	</div>
+	<div class="goalsHalf">
+		You have two active goals
+		<ul>
+			<li>Lose 5kg in weight by the 31st January 2008</li>
+			<li>Achieve a lap time of below 15 minutes by 31st January 2008</li>
+		</ul>
+	</div>
 </div>
 </div>
