@@ -1,0 +1,10 @@
+<div class="goals">
+	<h1>Active Goals</h1>
+	<% if @activegoals.length == 0 %>
+	You have no goals set, setting targets can help you GetFit.
+	<% else %>
+	
+	<% end %>
+	<p><%= link_to "Add a Goal", { :action => "new" }, :class => "action" %></p>
+	
+</div>

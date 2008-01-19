@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value
+
+loseweight:
+  id: 1
+  genericdescription: "To lose weight"
+  templatedescription: "To lose @wkg by @d"
+  focus: "W"
+  
+gainweight:
+  id: 2
+  genericdescription: "To gain weight"
+  templatedescription: "To gain @wkg by @d"
+  focus: "W"
+  
+fasterlap:
+  id: 3
+  genericdescription: "To achieve a faster laptime"
+  templatedescription: "To run a lap time of @t by @d"
+  focus: "T"
+  
+longerdistance:
+  id: 4
+  genericdescription: "To run further"
+  templatedescription: "To run @r by @d"
+  focus: "D"
