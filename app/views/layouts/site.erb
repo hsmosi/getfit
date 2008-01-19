@@ -30,15 +30,11 @@
 				                       "currenttab"
 				                  else "tab"
 					          end%>"><%= link_to "Body", { :action => "index", :controller => "body"}%></div>
-			<div class="<%= case @controller.controller_name 
-			                      when "goal"
-				                       "currenttab"
-				                  else "tab"
-					          end%>"><%= link_to "Goals", { :action => "index", :controller => "goal"}%></div>
 			<div class="tab" style="float: right"><%= link_to "Logout", { :action => "logout", :controller => "account"}%></div>
 		</div>
 	</div>
 	<div class="page">
+		
 	<%= yield :layout %>
 	</div>
 </body>

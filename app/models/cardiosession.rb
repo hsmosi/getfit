@@ -1,7 +1,6 @@
 class Cardiosession < ActiveRecord::Base
   belongs_to :user
   belongs_to :cardiotype
-  
   validates_numericality_of :distance, :message => "Distance must be a number", :allow_nil => true
   validates_presence_of :distance, :message => "Distance is required"
   validates_presence_of :timetaken, :message => "Time taken is required"

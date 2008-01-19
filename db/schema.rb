@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 5) do
 
   create_table "bodies", :force => true do |t|
     t.integer  "weight",          :null => false
@@ -32,26 +32,6 @@ ActiveRecord::Schema.define(:version => 8) do
 
   create_table "cardiotypes", :force => true do |t|
     t.string   "description", :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "goals", :force => true do |t|
-    t.string   "description"
-    t.date     "target_date",                     :null => false
-    t.integer  "cardiotype_id"
-    t.datetime "target_time"
-    t.integer  "target_weight"
-    t.integer  "user_id",                         :null => false
-    t.boolean  "active",        :default => true, :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "goaltype_id",   :default => 1,    :null => false
-  end
-
-  create_table "goaltypes", :force => true do |t|
-    t.string   "genericdescription",  :null => false
-    t.string   "templatedescription", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

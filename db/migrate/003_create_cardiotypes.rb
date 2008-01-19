@@ -8,6 +8,10 @@ class CreateCardiotypes < ActiveRecord::Migration
     end
     
     Fixtures.create_fixtures('test/fixtures', File.basename("cardiotypes.yml", '.*'))
+    
+    #Cardiotype.create :description => "Run"
+    #Cardiotype.create :description => "Swim"
+    #Cardiotype.create :description => "Cycle"
   end
 
   def self.down
