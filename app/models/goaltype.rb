@@ -3,7 +3,7 @@ class Goaltype < ActiveRecord::Base
   
   validates_presence_of :description
   validates_presence_of :focus
-  validates_inclusion_of :focus, :in => ['W', 'D', 'T']
+  validates_inclusion_of :focus, :in => ['G', 'L', 'D', 'T']
   
   def self.all
     self.find(:all)
