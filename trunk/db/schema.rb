@@ -37,16 +37,15 @@ ActiveRecord::Schema.define(:version => 8) do
   end
 
   create_table "goals", :force => true do |t|
-    t.string   "description"
-    t.date     "target_date",                     :null => false
+    t.date     "target_date",                    :null => false
     t.integer  "cardiotype_id"
     t.datetime "target_time"
     t.integer  "target_weight"
-    t.integer  "user_id",                         :null => false
-    t.boolean  "active",        :default => true, :null => false
+    t.integer  "target_distance"
+    t.integer  "user_id",                        :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "goaltype_id",   :default => 1,    :null => false
+    t.integer  "goaltype_id",     :default => 1, :null => false
   end
 
   create_table "goaltypes", :force => true do |t|

@@ -2,8 +2,9 @@ class GoalController < ApplicationController
   layout "site"
   
   def index
+    session[:head] = "goal"
     @activegoals = Goal.all_active(self.current_user)
-    @completegoals = Goal.all_completed(self.current_user)
+    @completedgoals = Goal.all_completed(self.current_user) # all goals passed the deadline
   end
   
   def new
@@ -15,7 +16,11 @@ class GoalController < ApplicationController
       @goal.target_date = Date.today + 28.days
     else
       @goal = Goal.new(params[:goal])
-      
+      @goal.user = self.current_user
+      if @goal.valid?
+        @goal.save
+        redirect_to self.source_url
+      end
     end
     
     @targetWeightStyle = "display: none;"

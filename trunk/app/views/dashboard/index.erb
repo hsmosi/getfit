@@ -58,11 +58,18 @@
 		<p><%= link_to "Add Weigh-in", { :action => "new", :controller => "body"}, :class => "action" %></p>
 	</div>
 	<div class="goalsHalf">
-		You have two active goals
-		<ul>
-			<li>Lose 5kg in weight by the 31st January 2008</li>
-			<li>Achieve a lap time of below 15 minutes by 31st January 2008</li>
-		</ul>
+		<% if @activegoals.length == 0 %>
+		You have no goals set, setting targets can help you GetFit.
+		<% else %>
+			<H1>Active Goals</h1>
+			You have <%= @activegoals.length.to_s %> active goals:
+			<ul>
+				<% @activegoals.each do |g| %>
+					<li><%= g.as_text %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<p><%= link_to "Add a Goal", { :action => "new" }, :class => "action" %></p>
 	</div>
 </div>
 </div>

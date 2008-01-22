@@ -2,9 +2,21 @@
 	<h1>Active Goals</h1>
 	<% if @activegoals.length == 0 %>
 	You have no goals set, setting targets can help you GetFit.
-	<% else %>
-	
-	<% end %>
+	<% else
+		 @activegoals.each do |g| %>
+		 	<%= link_to image_tag("delete.png", :size => "10x10"), { :action => "delete", :goalid => g.id }, :confirm => "Are you sure?" %>
+		<%= g.as_text %>
+		<br/>
+	<%   end
+	   end %>
 	<p><%= link_to "Add a Goal", { :action => "new" }, :class => "action" %></p>
 	
+	<% if @completedgoals.length > 0 %>
+		<p><h1>Completed Goals</h1>
+		<% @completedgoals.each do |g| %>
+			<%= image_tag("tick.png", :size => "10x10") if g.succeeded %>
+			<%= image_tag("cross.png", :size => "10x10") if !g.succeeded %>
+			<%= g.as_text %><br/>
+		<% end%></p>
+	<% end %>
 </div>

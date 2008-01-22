@@ -21,14 +21,15 @@
 			Target weight <%= g.text_field 'target_weight' %>
 		</div>
 		<div style="<%= @targetTimeStyle%>" id="targetTime">
-			Target time <%= g.text_field 'target_time' %><br/>
+			Target time <%= g.text_field 'target_time_as_text' %><br/>
 		</div>
 		<div style="<%= @targetDistanceStyle %>" id="targetDistance">
-			Target distance <%= text_field_tag 'target_distance' %><br/>
+			Target distance <%= g.text_field 'target_distance' %><br/>
 		</div>
 		<div style="<%= @targetTypeStyle %>" id="targetType">
 			Activity <%= collection_select(:goal, :cardiotype_id, @cardiotypes, "id", "description") %>
 		</div>
+		<%= content_tag('div', render(:partial => "errors") ) if !@goal.errors.nil? %>
 		<p><a class='action' href='#' onclick="$('goalform').submit()"><span>Save</span></a></p>
 	<% end -%>
 </div>
