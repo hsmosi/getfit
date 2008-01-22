@@ -15,11 +15,11 @@ class Goal < ActiveRecord::Base
   validates_numericality_of :target_time, :allow_nil => true, :message => "Target distance must be a number"
   
   def self.all_active(user)
-    self.find(:all, :conditions => "user_id = #{user.id}")
+    self.find(:all, :conditions => "user_id = #{user.id} AND target_date >= '#{Date.today.to_formatted_s(:db)}'")
   end
   
   def self.all_completed(user)
-    self.find(:all, :conditions => "user_id = #{user.id}")
+    self.find(:all, :conditions => "user_id = #{user.id} AND target_date < '#{Date.today.to_formatted_s(:db)}'")
   end
   
   def target_time_as_text=(text)
