@@ -8,6 +8,7 @@ class DashboardController < ApplicationController
     @cardioSessions = Cardiosession.top_five(self.current_user)
     @bodyStats = Body.top_five(self.current_user)
     @activegoals = Goal.all_active(self.current_user)
+    @completedgoals = Goal.all_completed(self.current_user)
     
     if (params[:graphtype].nil?)
       @graphtype = "Run"

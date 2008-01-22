@@ -9,13 +9,13 @@
 loseweight:
   id: 1
   genericdescription: "To lose weight"
-  templatedescription: "To lose @wkg by @d"
+  templatedescription: "To weight at most @wkg by @d"
   focus: "L"
   
 gainweight:
   id: 2
   genericdescription: "To gain weight"
-  templatedescription: "To gain @wkg by @d"
+  templatedescription: "To weight at least @wkg by @d"
   focus: "G"
   
 fasterlap:

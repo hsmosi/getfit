@@ -10,7 +10,7 @@ class GoalTest < ActiveSupport::TestCase
   
   def test_all_active_count
     qgoals = Goal.all_active(@quentin)
-    assert_equal(7, qgoals.length)
+    assert_equal(5, qgoals.length)
     
     agoals = Goal.all_active(@aaron)
     assert_equal(4, agoals.length)
