@@ -29,7 +29,9 @@ class GoalController < ApplicationController
     @targetTypeStyle = "display: none;"
     
     case @goal.goaltype.focus
-      when "W"
+      when "G"
+        @targetWeightStyle = "display: block;"
+      when "L"
         @targetWeightStyle = "display: block;"
       when "T"
         @targetTimeStyle = "display: block;"
