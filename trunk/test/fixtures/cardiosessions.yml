@@ -14,8 +14,8 @@ end
 
 quentinrun:
   id: 1
-  distance: 2
-  workoutdate: <%= Time.now.to_formatted_s(:db) %>
+  distance: 4
+  workoutdate: <%= Date.today.to_formatted_s(:db) %>
   timetaken: <%= Time.parse("00:10:00").to_formatted_s(:db) %>
   comments: Some comment
   user_id: 1
@@ -23,7 +23,7 @@ quentinrun:
 quentinswim:
   id: 2
   distance: 2
-  workoutdate: <%= (Time.now - dhms2sec(1)).to_formatted_s(:db) %>
+  workoutdate: <%= (Date.today - 1.days).to_formatted_s(:db) %>
   timetaken: <%= Time.parse("00:10:00").to_formatted_s(:db) %>
   cardiotype_id: 2
   comments: It hurt it hurt
@@ -32,8 +32,8 @@ quentinswim:
 quentinone:
   id: 3
   distance: 2
-  workoutdate: <%= (Time.now - dhms2sec(10)).to_formatted_s(:db) %>
-  timetaken: <%= Time.parse("00:10:00").to_formatted_s(:db) %>
+  workoutdate: <%= (Date.today - 10.days).to_formatted_s(:db) %>
+  timetaken: <%= Time.parse("00:10:10").to_formatted_s(:db) %>
   cardiotype_id: 2
   comments: It hurt it hurt
   user_id: 1
@@ -41,7 +41,7 @@ quentinone:
 quentintwo:
   id: 4
   distance: 2
-  workoutdate: <%= (Time.now - dhms2sec(12)).to_formatted_s(:db) %>
+  workoutdate: <%= (Date.today - 12.days).to_formatted_s(:db) %>
   timetaken: <%= Time.parse("00:10:30").to_formatted_s(:db) %>
   cardiotype_id: 2
   comments: It hurt it hurt
@@ -50,8 +50,8 @@ quentintwo:
 quentinthree:  
   id: 5
   distance: 2
-  workoutdate: <%= (Time.now - dhms2sec(29)).to_formatted_s(:db) %>
-  timetaken: <%= Time.parse("00:9:59").to_formatted_s(:db) %>
+  workoutdate: <%= (Date.today - 29.days).to_formatted_s(:db) %>
+  timetaken: <%= Time.parse("00:10:40").to_formatted_s(:db) %>
   cardiotype_id: 2
   comments: It hurt it hurt
   user_id: 1
@@ -59,7 +59,7 @@ quentinthree:
 quentinfour:
   id: 6
   distance: 3
-  workoutdate: <%= (Time.now - dhms2sec(34)).to_formatted_s(:db) %>
+  workoutdate: <%= (Date.today - 34.days).to_formatted_s(:db) %>
   timetaken: <%= Time.parse("00:10:15").to_formatted_s(:db) %>
   cardiotype_id: 2
   comments: It hurt it hurt
@@ -68,7 +68,7 @@ quentinfour:
 aaroncycle:
   id: 7
   distance: 2
-  workoutdate: <%= Time.now.to_formatted_s(:db) %>
+  workoutdate: <%= Date.today.to_formatted_s(:db) %>
   timetaken: <%= Time.parse("00:30:00").to_formatted_s(:db) %>
   cardiotype_id: 3
   comments: Ow ow ow

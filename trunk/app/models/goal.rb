@@ -41,7 +41,7 @@ class Goal < ActiveRecord::Base
   end
   
   def target_time_in_seconds
-    dhms2s(0, self.target_time.hour, self.target_time.min, self.target_time.sec)
+    dhms2sec(0, self.target_time.hour, self.target_time.min, self.target_time.sec)
   end
   
   def succeeded
@@ -49,22 +49,48 @@ class Goal < ActiveRecord::Base
       false
     else
       if self.is_time_based
-        last_session = Cardiosession.last_session(self.user, self.target_date, self.cardiotype)
+        last_session = Cardiosession.last_session_for_type(self.user, self.target_date, self.cardiotype)
         if last_session.nil?
           return false
         else
           return last_session.laptime_in_seconds <= self.target_time_in_seconds
         end
       elsif self.is_distance_based
-        
-      else #weight based
-        
+        last_session = Cardiosession.last_session_for_type(self.user, self.target_date, self.cardiotype)
+        if (last_session.nil?)
+          return false
+        else
+          return last_session.distance >= self.target_distance
+        end
+      elsif self.is_gain_weight
+        last_weight = Body.last_measurement(self.user, self.target_date)
+        if (last_weight.nil?)
+          return false
+        else
+          return last_weight.weight >= self.target_weight
+        end
+      elsif self.is_lose_weight
+        last_weight = Body.last_measurement(self.user, self.target_date)
+        if (last_weight.nil?)
+          return false
+        else
+          return last_weight.weight >= self.target_weight
+        end
       end
+      false
     end
   end
   
+  def is_gain_weight
+    return !self.goaltype.nil? && self.goaltype.focus == "G";
+  end
+  
+  def is_lose_weight
+    return !self.goaltype.nil? && self.goaltype.focus == "L";
+  end
+  
   def is_weight_based
-    return !self.goaltype.nil? && self.goaltype.focus == "W"
+    return !self.goaltype.nil? && (self.goaltype.focus == "G" || self.goaltype.focus == "L")
   end
   
   def is_time_based

@@ -61,7 +61,12 @@ class Cardiosession < ActiveRecord::Base
   end
   
   # finds the first session that occurred on or before date for the given user and cardiotype
-  def self.last_session(user, date, cardiotype)
-    
+  def self.last_session_for_type(user, before, cardiotype)
+    self.find(:first, :conditions => "user_id = #{user.id} AND workoutdate <= '#{before.to_formatted_s(:db)}' AND cardiotype_id = #{cardiotype.id}", :order => "workoutdate desc")
+  end
+  
+  # finds the first session that occurred on or before date for the given user
+  def self.last_session(user, before)
+    self.find(:first, :conditions => "user_id = #{user.id} AND workoutdate <= '#{before.to_formatted_s(:db)}'", :order => "workoutdate desc")
   end
 end
