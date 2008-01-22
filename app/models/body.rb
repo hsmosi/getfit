@@ -15,7 +15,11 @@ class Body < ActiveRecord::Base
   end
   
   def self.last_month(user)
-    startdate = Time.now - dhms2sec(28)
+    startdate = Date.today - 28.days
     self.find(:all, :conditions => "user_id = #{user.id} AND measurementdate > '#{startdate.to_formatted_s(:db)}'", :order => "measurementdate desc")
+  end
+  
+  def self.last_measurement(user, beforedate)
+    self.find(:first, :conditions => "user_id = #{user.id} AND measurementdate <= '#{beforedate.to_formatted_s(:db)}'", :order => "measurementdate desc")
   end
 end

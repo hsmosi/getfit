@@ -108,4 +108,16 @@ class CardiosessionTest < ActiveSupport::TestCase
     assert_not_nil(results)
     assert_equal(3, results.length)
   end
+  
+  def test_last_session_for_cardio_type_swim
+    s = Cardiosession.last_session_for_type(@quentin, Date.today, @swim)
+    assert_not_nil(s)
+    assert_equal(2, s.id)
+  end
+  
+  def test_last_session
+    s = Cardiosession.last_session(@quentin, Date.today)
+    assert_not_nil(s)
+    assert_equal(1, s.id)
+  end
 end

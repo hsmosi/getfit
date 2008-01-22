@@ -32,8 +32,8 @@ class DashboardControllerTest < ActionController::TestCase
     assert_not_nil(assigns["maxValue"])
     
     assert_equal(1, assigns["cardioSessions"].length)
-    assert_equal(290, assigns["minValue"])
-    assert_equal(310, assigns["maxValue"])
+    assert_equal(140, assigns["minValue"])
+    assert_equal(160, assigns["maxValue"])
   end
   
   def test_bodyGraphData

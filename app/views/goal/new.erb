@@ -5,7 +5,9 @@
 		<p style="padding-left: 1em;">
 			<% @goaltypes.each do |gt|
 				case gt.focus
-					when "W"
+					when "G"
+						code = "$('targetWeight').show();$('targetTime').hide();$('targetDistance').hide();$('targetType').hide();"
+					when "L"
 						code = "$('targetWeight').show();$('targetTime').hide();$('targetDistance').hide();$('targetType').hide();"
 					when "T"
 						code = "$('targetWeight').hide();$('targetTime').show();$('targetDistance').hide();$('targetType').show();"
