@@ -4,8 +4,11 @@ class DashboardController < ApplicationController
   
   def index
     session[:head] = self.controller_name
+    
     @cardioSessions = Cardiosession.top_five(self.current_user)
     @bodyStats = Body.top_five(self.current_user)
+    @activegoals = Goal.all_active(self.current_user)
+    
     if (params[:graphtype].nil?)
       @graphtype = "Run"
     else

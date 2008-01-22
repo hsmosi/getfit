@@ -5,3 +5,29 @@
 #
 # two:
 #   column: value
+
+quentin_target_time:
+  target_date: <%= (Time.now + 28.days).to_formatted_s(:db)  %>
+  cardiotype_id: 2
+  target_time: <%= Time.parse("00:30:00").to_formatted_s(:db) %>
+  user_id: 1
+  goaltype_id: 3
+ 
+quentin_target_distance:
+  target_date: <%= (Time.now + 32.days).to_formatted_s(:db)  %>
+  cardiotype_id: 1
+  target_distance: 3
+  user_id: 1
+  goaltype_id: 4
+  
+quentin_target_weight:
+  target_date: <%= (Time.now + 32.days).to_formatted_s(:db)  %>
+  target_weight: 85
+  user_id: 1
+  goaltype_id: 2
+  
+aaron_target_weight:
+  target_date: <%= (Time.now + 10.days).to_formatted_s(:db)  %>
+  target_weight: 75
+  user_id: 2
+  goaltype_id: 1
