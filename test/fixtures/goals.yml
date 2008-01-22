@@ -71,20 +71,20 @@ aaron_gain_weight_succeed:
 aaron_gain_weight_failed:
   id: 9
   target_date: <%= Date.today.to_formatted_s(:db)  %>
-  target_weight: 101
+  target_weight: 99
   user_id: 2
   goaltype_id: 2
 
 aaron_lose_weight_succeed:
   id: 10
   target_date: <%= Date.today.to_formatted_s(:db)  %>
-  target_weight: 99
+  target_weight: 101
   user_id: 2
   goaltype_id: 1
 
 aaron_lose_weight_failed:
   id: 11
   target_date: <%= Date.today.to_formatted_s(:db)  %>
-  target_weight: 101
+  target_weight: 99
   user_id: 2
   goaltype_id: 1

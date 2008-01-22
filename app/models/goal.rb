@@ -48,33 +48,21 @@ class Goal < ActiveRecord::Base
     if self.target_date > Date.today
       false
     else
-      if self.is_time_based
+      if self.is_time_based || self.is_distance_based
         last_session = Cardiosession.last_session_for_type(self.user, self.target_date, self.cardiotype)
         if last_session.nil?
           return false
         else
-          return last_session.laptime_in_seconds <= self.target_time_in_seconds
+          (return last_session.laptime_in_seconds <= self.target_time_in_seconds) if self.is_time_based
+          (return last_session.distance >= self.target_distance) if self.is_distance_based
         end
-      elsif self.is_distance_based
-        last_session = Cardiosession.last_session_for_type(self.user, self.target_date, self.cardiotype)
-        if (last_session.nil?)
-          return false
-        else
-          return last_session.distance >= self.target_distance
-        end
-      elsif self.is_gain_weight
+      elsif self.is_weight_based
         last_weight = Body.last_measurement(self.user, self.target_date)
         if (last_weight.nil?)
           return false
         else
-          return last_weight.weight >= self.target_weight
-        end
-      elsif self.is_lose_weight
-        last_weight = Body.last_measurement(self.user, self.target_date)
-        if (last_weight.nil?)
-          return false
-        else
-          return last_weight.weight >= self.target_weight
+          (return last_weight.weight >= self.target_weight) if self.is_gain_weight
+          (return last_weight.weight <= self.target_weight) if self.is_lose_weight
         end
       end
       false
