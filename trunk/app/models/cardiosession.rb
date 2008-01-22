@@ -69,4 +69,9 @@ class Cardiosession < ActiveRecord::Base
   def self.last_session(user, before)
     self.find(:first, :conditions => "user_id = #{user.id} AND workoutdate <= '#{before.to_formatted_s(:db)}'", :order => "workoutdate desc")
   end
+  
+  # are there any logged cardio sessions specified for the current user
+  def self.has_cardiosession_for_type(user, cardiotype)
+    return !self.find(:first, :conditions => "user_id = #{user.id} AND cardiotype_id = #{cardiotype.id}").nil?
+  end
 end
