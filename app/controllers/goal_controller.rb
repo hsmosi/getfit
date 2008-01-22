@@ -40,6 +40,22 @@ class GoalController < ApplicationController
         @targetDistanceStyle = "display: block;"
         @targetTypeStyle = "display: block;"
     end
-
+  end
+  
+  def delete
+    begin
+      goal = Goal.find(params[:goalid])
+    rescue
+      redirect_to :action => "unauthorised"
+      return
+    end
+    
+    if goal.user != self.current_user
+      redirect_to :action => "unauthorised"
+      return
+    end
+    
+    Goal.delete(goal.id)
+    redirect_to self.source_url
   end
 end

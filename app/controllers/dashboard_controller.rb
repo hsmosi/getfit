@@ -16,6 +16,7 @@ class DashboardController < ApplicationController
       @graphtype = params[:graphtype]
     end
     
+    # needs abstracting when these are made customisable
     case @graphtype
       when "Run"
         @graphCaption = "Recent Runs - Laptime in Seconds"
@@ -32,8 +33,11 @@ class DashboardController < ApplicationController
     
     if @graphtype == "Weight"
       @graphdataurl = url_for(:action=>"bodyGraphData", :graphtype => @graphtype)
+      @emptygraph = self.current_user.bodies.empty?
     else
       @graphdataurl = url_for(:action=>"cardioGraphData", :graphtype => @graphtype)
+      cardioType = Cardiotype.find_by_description(@graphtype)
+      @emptygraph = !Cardiosession.has_cardiosession_for_type(self.current_user, cardioType)
     end
   end
   
