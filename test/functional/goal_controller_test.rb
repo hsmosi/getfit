@@ -16,6 +16,7 @@ class GoalControllerTest < ActionController::TestCase
     assert_not_nil(assigns["activegoals"])
     assert_not_nil(assigns["completedgoals"])
     assert_equal(5, assigns["activegoals"].length)
+    assert_equal(2, assigns["completedgoals"].length)
   end
   
   def test_new_success
