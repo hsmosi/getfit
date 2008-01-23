@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>GetFit</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="James Randall">
+	<%= javascript_include_tag 'prototype' %>
+	<%= stylesheet_link_tag 'site', :media => "all" %>
+	<%= calendar_date_select_includes "blue" %>
+	<!-- Date: 2008-01-08 -->
+</head>
+<body>
+	<div class="top">
+		<div class="title">GetFit</div>
+		<div class="tabbar">
+			<div class="<%= case @controller.controller_name 
+			                      when "dashboard"
+				                       "currenttab"
+				                  else "tab"
+					          end%>"><%= link_to "Home", { :action => "index", :controller => "dashboard" }%></div>
+			<div class="<%= case @controller.controller_name 
+			                      when "cardio"
+				                       "currenttab"
+				                  else "tab"
+					          end%>"><%= link_to "Cardio", { :action => "index", :controller => "cardio" }%></div>
+			<div class="<%= case @controller.controller_name 
+			                      when "body"
+				                       "currenttab"
+				                  else "tab"
+					          end%>"><%= link_to "Body", { :action => "index", :controller => "body"}%></div>
+			<div class="<%= case @controller.controller_name 
+			                      when "goal"
+				                       "currenttab"
+				                  else "tab"
+					          end%>"><%= link_to "Goals", { :action => "index", :controller => "goal"}%></div>
+			<div class="tab" style="float: right"><%= link_to "Logout", { :action => "logout", :controller => "account"}%></div>
+		</div>
+	</div>
+	<div class="page">
+	<%= yield :layout %>
+	</div>
+</body>
+</html>

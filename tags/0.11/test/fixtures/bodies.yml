@@ -1,0 +1,59 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value
+
+<%
+include ApplicationHelper
+%>
+
+quentinbodyone:
+  id: 1
+  measurementdate: <%= Date.today.to_formatted_s(:db) %>
+  weight: 80
+  user_id: 1
+  
+quentinbodytwo:
+  id: 2
+  measurementdate: <%= (Date.today - 1.days).to_formatted_s(:db) %>
+  weight: 85
+  user_id: 1
+
+quentinbodythree:
+  id: 3
+  measurementdate: <%= (Date.today - 2.days).to_formatted_s(:db) %>
+  weight: 86
+  user_id: 1
+
+quentinbodyfour:
+  id: 4
+  measurementdate: <%= (Date.today - 25.days).to_formatted_s(:db) %>
+  weight: 87
+  user_id: 1
+
+quentinbodyfive:
+  id: 5
+  measurementdate: <%= (Date.today - 32.days).to_formatted_s(:db) %>
+  weight: 88
+  user_id: 1
+
+quentinbodysix:
+  id: 6
+  measurementdate: <%= (Date.today - 40.days).to_formatted_s(:db) %>
+  weight: 89
+  user_id: 1
+
+aaronbodyone:
+  id: 7
+  measurementdate: <%= Date.today.to_formatted_s(:db) %>
+  weight: 100
+  user_id: 2
+  
+aaronbodytwo:
+  id: 8
+  measurementdate: <%= (Date.today - 5.days).to_formatted_s(:db) %>
+  weight: 90
+  user_id: 2

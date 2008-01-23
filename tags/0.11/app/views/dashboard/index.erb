@@ -1,0 +1,87 @@
+<div style="min-height: 400px; padding: 0px; margin: 0px;">
+<div class="graph" style="float:right; width: 400px">
+	<div><h1><%= @graphCaption %></h1></div>
+	<% if !@emptygraph %>
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="400" id="Line" >
+	         <param name="movie" value="/FusionCharts/FCF_Line.swf" />
+	         <param name="FlashVars" value="&dataURL=<%= @graphdataurl %>&chartWidth=400&chartHeight=300" />
+	         <param name="quality" value="high" />
+		<embed src="/FusionCharts/FCF_Line.swf" flashVars="&dataURL=<%= @graphdataurl %>&chartWidth=400&chartHeight=300" quality="high" width="400" height="300" name="Line" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+    </object>
+	<% else %>
+	<div style="width:400px; height: 300px; line-height: 300px;text-align: center;">No sessions logged of this type</div>
+	<% end %>
+	<%= link_to "Run", { :action => "index", :graphtype => "Run" }%>
+	<%= link_to "Swim", { :action => "index", :graphtype => "Swim" }%>
+	<%= link_to "Cycle", { :action => "index", :graphtype => "Cycle" }%>
+	<%= link_to "Weight", { :action => "index", :graphtype => "Weight" }%>
+</div>
+<div>
+	<div class="summaryHalf">
+		<h1>Recent Activity</h1>
+		<% if @cardioSessions.length == 0 %>
+		None yet. Don't you think you should get out there?
+		<% else %>
+		<table>
+			<tr>
+				<th>Date</th>
+				<th>Type</th>
+				<th>Distance</th>
+				<th>Total Time</th>
+				<th>Lap Time</th>
+			</tr>
+			<% @cardioSessions.each do |s| %>
+				<tr>
+					<td><%= link_to s.workoutdate.strftime("%A %d %B"), { :action => "edit", :controller => "cardio", :sessionid => s.id } %></td>
+					<td><%= s.cardiotype.description %></td>
+					<td align="right"><%= s.distance %></td>
+					<td align="right"><%= s.timetakenastext %></td>
+					<td align="right"><%= s.formatted_laptime %></td>
+				</tr>
+			<% end %>
+		</table>
+		<% end -%>
+		<p><%= link_to "Add Session", { :action => "new", :controller => "cardio"}, :class => "action" %></p>
+		<h1 style="margin-top: 1em">Recent Weigh-ins</h1>
+		<% if @bodyStats.length == 0 %>
+		No weigh-ins recorded yet. Go on... it doesn't hurt.
+		<% else %>
+		<table>
+			<tr>
+				<th>Date</th>
+				<th>Weight</th>
+			</tr>
+			<% @bodyStats.each do |b| %>
+				<tr>
+					<td><%= link_to b.measurementdate.strftime("%A %d %B"), { :action => "edit", :controller => "body", :bodyid => b.id }%></td>
+					<td><%= b.weight%></td>
+				</tr>
+			<% end %>
+		</table>
+		<% end -%>
+		<p><%= link_to "Add Weigh-in", { :action => "new", :controller => "body"}, :class => "action" %></p>
+	</div>
+	<div class="goalsHalf">
+		<% if @activegoals.length == 0 %>
+		You have no goals set, setting targets can help you GetFit.
+		<% else %>
+			<H1>Active Goals</h1>
+			You have <%= @activegoals.length.to_s %> active goals:
+			<ul>
+				<% @activegoals.each do |g| %>
+					<li><%= g.as_text %></li>
+				<% end %>
+			</ul>
+		<% end %>
+		<p><%= link_to "Add a Goal", { :controller => "goal", :action => "new" }, :class => "action" %></p>
+		<% if @completedgoals.length > 0 %>
+			<h1>Recently Completed Goals</h1>
+			<% @completedgoals.each do |g| %>
+				<%= image_tag("tick.png", :size => "10x10") if g.succeeded %>
+				<%= image_tag("cross.png", :size => "10x10") if !g.succeeded %>
+				<%= g.as_text %><br/>
+			<% end -%>
+		<% end -%>
+	</div>
+</div>
+</div>

@@ -1,0 +1,6 @@
+xml.instruct! :xml, :version=>"1.0"
+xml.graph(:animation => "0", :bgColor => "FFFBDB", :showNames => "1", :decimalPrecision => "0", :formatNumberScale => "0", :yAxisMinValue => "#{@minValue}", :yAxisMaxValue => "#{@maxValue}", :showValues => "0") do
+  @bodyMetrics.each do |b|
+    xml.set(:name => b.measurementdate.strftime("%d %b"), :value => b.weight)
+  end
+end

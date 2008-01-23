@@ -1,0 +1,209 @@
+body
+{
+	font-family: helvetica;
+	font-size: smaller;
+	color: black;
+	padding: 0px;
+	margin: 0px;
+	background-color: #DFDFDF;
+}
+
+div.top
+{
+	background-color: #101A63;
+	padding-top: 0.75em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+div.title
+{
+	color: yellow;
+	font-size: larger;
+	font-style: italic;
+	margin-bottom: 0.5em;
+}
+
+div.tabbar
+{
+	height: 1.6em;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.currenttab
+{
+	/*background-image: url('/images/tab.png');
+	background-repeat: no-repeat;
+	background-position: 0.5em 0em;*/
+	float: left;
+	background-color: #DFDFDF;
+	line-height: 1.6em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	vertical-align: bottom;
+	margin-right: 3px;
+	color: #BFBFBF;
+	height: 1.6em;
+}
+
+div.currenttab a
+{
+	color: #177927;
+	text-decoration: none;
+}
+
+div.tab
+{
+	float: left;
+	background-color: #4955AC;
+	line-height: 1.6em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	vertical-align: bottom;
+	margin-right: 3px;
+	color: #BFBFBF;
+	height: 1.6em;
+}
+
+div.tab a
+{
+	color: #BFBFBF;
+	text-decoration: none;
+}
+
+div.page
+{
+	clear: both;
+	margin: 1em 2em 1em 2em;
+	padding: 1em;
+	background-color: white;
+}
+
+div.goalsHalf
+{
+	background-color: #FFE9E9;
+	padding: 0.5em;
+	margin-bottom: 1em;
+	margin-right: 425px;
+}
+
+div.goals
+{
+	background-color: #FFE9E9;
+	padding: 0.5em;
+	margin-bottom: 1em;
+}
+
+div.summary
+{
+	background-color: #EDF0FA;
+	padding: 0.5em;
+	margin-bottom: 1em;
+}
+
+div.summaryHalf
+{
+	background-color: #EDF0FA;
+	padding: 0.5em;
+	margin-bottom: 1em;
+	margin-right: 425px;
+}
+
+div.left
+{
+	background-color: #FFFBDB;
+	float: left;
+	width: 50%;	
+}
+
+div.right
+{
+	background-color: #FFDBDB;
+	float: right;
+	width: 49%;
+}
+
+div.graph
+{
+	background-color: #FFFBDB;
+	text-align: center;
+	padding: 0.5em;
+}
+
+div.graph div
+{
+	text-align: left;
+}
+
+div.graph a
+{
+	color: darkblue;
+	text-decoration: none;
+	border-bottom: dashed 1px darkblue;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+a.action
+{
+	color: darkblue;
+	text-decoration: none;
+	border-bottom: dashed 1px darkblue;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+a
+{
+	color: darkblue;
+	text-decoration: none;
+}
+
+a img
+{
+	border: 0px;
+}
+
+th
+{
+	font-weight: normal;
+	font-weight: bold;
+	text-align: left;
+	padding: 0.2em;
+	padding-right: 1em;
+	color: #555555;
+}
+
+tr
+{
+	padding: 0.2em;
+}
+
+td
+{
+	padding: 0.2em;
+	padding-right: 1em;
+}
+
+table
+{
+	padding: 0.1em;
+}
+
+span.error
+{
+	color: red;
+	display: block;
+}
+
+h1
+{
+	font-size: larger;
+	font-style: italic;
+	margin-top: 0px;
+	padding-top: 0px;
+	margin-bottom: 0.5em;
+	padding-bottom: 0px;
+	color: #555555;
+}

@@ -1,0 +1,75 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value
+
+<%
+def dhms2sec(days, hrs=0, min=0, sec=0)
+    days*86400 + hrs*3600 + min*60 + sec
+end
+%>
+
+quentinrun:
+  id: 1
+  distance: 4
+  workoutdate: <%= Date.today.to_formatted_s(:db) %>
+  timetaken: <%= Time.parse("00:10:00").to_formatted_s(:db) %>
+  comments: Some comment
+  user_id: 1
+ 
+quentinswim:
+  id: 2
+  distance: 2
+  workoutdate: <%= (Date.today - 1.days).to_formatted_s(:db) %>
+  timetaken: <%= Time.parse("00:10:00").to_formatted_s(:db) %>
+  cardiotype_id: 2
+  comments: It hurt it hurt
+  user_id: 1
+
+quentinone:
+  id: 3
+  distance: 2
+  workoutdate: <%= (Date.today - 10.days).to_formatted_s(:db) %>
+  timetaken: <%= Time.parse("00:10:10").to_formatted_s(:db) %>
+  cardiotype_id: 2
+  comments: It hurt it hurt
+  user_id: 1
+  
+quentintwo:
+  id: 4
+  distance: 2
+  workoutdate: <%= (Date.today - 12.days).to_formatted_s(:db) %>
+  timetaken: <%= Time.parse("00:10:30").to_formatted_s(:db) %>
+  cardiotype_id: 2
+  comments: It hurt it hurt
+  user_id: 1
+
+quentinthree:  
+  id: 5
+  distance: 2
+  workoutdate: <%= (Date.today - 29.days).to_formatted_s(:db) %>
+  timetaken: <%= Time.parse("00:10:40").to_formatted_s(:db) %>
+  cardiotype_id: 2
+  comments: It hurt it hurt
+  user_id: 1
+
+quentinfour:
+  id: 6
+  distance: 3
+  workoutdate: <%= (Date.today - 34.days).to_formatted_s(:db) %>
+  timetaken: <%= Time.parse("00:10:15").to_formatted_s(:db) %>
+  cardiotype_id: 2
+  comments: It hurt it hurt
+  user_id: 1
+
+aaroncycle:
+  id: 7
+  distance: 2
+  workoutdate: <%= Date.today.to_formatted_s(:db) %>
+  timetaken: <%= Time.parse("00:30:00").to_formatted_s(:db) %>
+  cardiotype_id: 3
+  comments: Ow ow ow
+  user_id: 2

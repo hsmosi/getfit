@@ -1,0 +1,37 @@
+<div class="goals">
+	<% form_for :goal, @goal, :html => { :id => "goalform" } do |g| %>
+		<h1>Add a Goal</h1>
+		What's the plan?
+		<p style="padding-left: 1em;">
+			<% @goaltypes.each do |gt|
+				case gt.focus
+					when "G"
+						code = "$('targetWeight').show();$('targetTime').hide();$('targetDistance').hide();$('targetType').hide();"
+					when "L"
+						code = "$('targetWeight').show();$('targetTime').hide();$('targetDistance').hide();$('targetType').hide();"
+					when "T"
+						code = "$('targetWeight').hide();$('targetTime').show();$('targetDistance').hide();$('targetType').show();"
+					when "D"
+						code = "$('targetWeight').hide();$('targetTime').hide();$('targetDistance').show();$('targetType').show();"
+				end
+			%>
+				<%= g.radio_button("goaltype_id", gt.id, :onclick => code)%><%= gt.genericdescription %><br/>
+			<% end -%>
+		</p>
+		Deadline <%= g.date_select "target_date" %>
+		<div style="<%= @targetWeightStyle%>" id="targetWeight">
+			Target weight <%= g.text_field 'target_weight' %>
+		</div>
+		<div style="<%= @targetTimeStyle%>" id="targetTime">
+			Target time <%= g.text_field 'target_time_as_text' %><br/>
+		</div>
+		<div style="<%= @targetDistanceStyle %>" id="targetDistance">
+			Target distance <%= g.text_field 'target_distance' %><br/>
+		</div>
+		<div style="<%= @targetTypeStyle %>" id="targetType">
+			Activity <%= collection_select(:goal, :cardiotype_id, @cardiotypes, "id", "description") %>
+		</div>
+		<%= content_tag('div', render(:partial => "errors") ) if !@goal.errors.nil? %>
+		<p><a class='action' href='#' onclick="$('goalform').submit()"><span>Save</span></a></p>
+	<% end -%>
+</div>
