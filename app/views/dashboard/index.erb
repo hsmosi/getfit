@@ -73,7 +73,7 @@
 				<% end %>
 			</ul>
 		<% end %>
-		<p><%= link_to "Add a Goal", { :action => "new" }, :class => "action" %></p>
+		<p><%= link_to "Add a Goal", { :controller => "goal", :action => "new" }, :class => "action" %></p>
 		<% if @completedgoals.length > 0 %>
 			<h1>Recently Completed Goals</h1>
 			<% @completedgoals.each do |g| %>
