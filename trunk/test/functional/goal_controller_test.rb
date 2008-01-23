@@ -50,10 +50,18 @@ class GoalControllerTest < ActionController::TestCase
     assert_equal(original_row_count - 1, Goal.find(:all).length)
   end
   
-  def test_delete_fail
+  def test_delete_unauthorised
     original_row_count = Goal.find(:all).length
     login_as(:aaron)
     get :delete, :goalid => 1
+    assert_response(:redirect)
+    assert_equal(original_row_count, Goal.find(:all).length)
+  end
+  
+  def test_delete_missing
+    original_row_count = Goal.find(:all).length
+    login_as(:aaron)
+    get :delete, :goalid => 999
     assert_response(:redirect)
     assert_equal(original_row_count, Goal.find(:all).length)
   end
