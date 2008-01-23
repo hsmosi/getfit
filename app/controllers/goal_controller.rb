@@ -20,6 +20,7 @@ class GoalController < ApplicationController
       if @goal.valid?
         @goal.save
         redirect_to self.source_url
+        return
       end
     end
     
