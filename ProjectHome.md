@@ -1,0 +1,1 @@
+A Ruby on Rails web app for tracking fitness training online. Developed as part of the hanging the laundry out / Rails tutorial project on http://www.rollamonkey.com/blog/
